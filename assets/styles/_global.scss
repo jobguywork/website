@@ -1,0 +1,85 @@
+body {
+  background: $background-color;
+  font-size: $main-font-size;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 1.75em;
+}
+
+* {
+  font-family: 'Vazir', Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+pre {
+  direction: ltr;
+}
+
+label,
+input,
+textarea,
+select,
+button {
+  font-weight: 300
+}
+
+b,
+strong {
+  font-weight: bold !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+b,
+strong {
+  font-weight: 500;
+}
+
+.container {
+  width: 100%;
+  max-width: 1210px;
+  margin: auto;
+
+  @media (max-width: 740px) {
+    padding: 10px;
+  }
+}
+
+.blueimp-gallery>.close {
+  font-family: arial;
+}
+
+.infinite-status-prompt {
+  display: none;
+}
+
+.ltr-input {
+  ::placeholder {
+    text-align: right;
+    direction: rtl;
+  }
+
+  textarea,
+  input {
+    direction: ltr;
+  }
+}

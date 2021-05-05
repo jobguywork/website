@@ -1,0 +1,20 @@
+.apexcharts-legend-series {
+    direction: rtl;
+    .apexcharts-legend-text {
+      margin-right: 5px;
+    }
+  }
+  
+  .apexcharts-tooltip {
+    direction: rtl;
+    text-align: right;
+    .apexcharts-tooltip-title {
+      direction: ltr;
+      text-align: center;
+    }
+    .apexcharts-tooltip-marker {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+  }
+  

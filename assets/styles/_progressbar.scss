@@ -1,0 +1,44 @@
+.nuxt-progress {
+  position: fixed;
+  z-index: 2000;
+  height: 5px !important;
+  background: linear-gradient(90deg, #593C8F, #0779BF, #00A7E1);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 1s ease infinite;
+  -moz-animation: Gradient 1s ease infinite;
+  animation: Gradient 1s ease infinite;
+  top: 0;
+  left: 0;
+  width: 100%;  
+}
+
+.nuxt-progress-failed{
+  background: linear-gradient(90deg, #fd0076, #aa00d4, #f30000);
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+  }
+  50% {
+    opacity: 0.5;
+    -ms-filter: 'alpha(opacity=50)';
+  }
+  100% {
+    opacity: 1;
+    -ms-filter: 'alpha(opacity=100)';
+  }
+}
