@@ -22,7 +22,7 @@
         :loading="loadingBtn"
         size="mini"
         type="primary"
-        @click="handeleSubmit"
+        @click="handleSubmit"
       >
         ارسال جواب
       </el-button>
@@ -74,7 +74,7 @@ export default {
     },
   },
   methods: {
-    handeleSubmit() {
+    handleSubmit() {
       this.$refs.form.validate(async (valid) => {
         if (valid) {
           if (this.$isLogin) {
