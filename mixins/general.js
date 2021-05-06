@@ -55,7 +55,7 @@ export const general = {
     cutString(str, limitString) {
       return str ? substr(str, 0, limitString) : ''
     },
-    converNum2persian(number) {
+    convertNum2persian(number) {
       number = toNumber(number)
       if (isNumber(number)) {
         return Num2persian(number)

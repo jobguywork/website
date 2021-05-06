@@ -128,7 +128,7 @@ export default {
       }
     },
     helpToman(value) {
-      return this.converNum2persian(value) + ' تومان در ماه'
+      return this.convertNum2persian(value) + ' تومان در ماه'
     },
   },
 }
