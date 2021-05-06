@@ -8,7 +8,7 @@
     >
       <ElCol :xs="24" :sm="24" :md="24" :lg="20" :xl="20">
         <ElCard class="mb-50" :body-style="{ padding: '10px' }">
-          <div class="contetn rtl">
+          <div class="content rtl">
             <img
               src="/images/contact-us.webp"
               alt="ایجاد شرکت جدید"
@@ -87,7 +87,7 @@ export default {
       height: auto;
     }
   }
-  .contetn {
+  .content {
     line-height: 28px;
   }
   .create-company {
