@@ -93,9 +93,9 @@ export default {
     toggleSearch() {
       this.$store.commit('theme/TOGGLE_SEARCH_MOBILE')
     },
-    onChangeDisplay(dispaly) {
-      this.display = dispaly
-      this.$emit('dispaly', dispaly)
+    onChangeDisplay(display) {
+      this.display = display
+      this.$emit('display', display)
     },
   },
 }
