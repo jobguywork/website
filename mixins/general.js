@@ -67,7 +67,7 @@ export const general = {
     gregorianToJalali(date, formatInput, formatOutput) {
       return momentJalaali(date, formatInput).format(formatOutput)
     },
-    iterviewStatusString(status) {
+    interviewStatusString(status) {
       switch (status) {
         case 'WORKING':
           return 'پذیرفته شدم اما خودم رد کردم'
