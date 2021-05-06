@@ -19,27 +19,27 @@ export default {
     link: {
       type: String,
       default: null,
-      reqiured: true,
+      required: true,
     },
     icon: {
       type: String,
       default: 'far fa-file-code',
-      reqiured: true,
+      required: true,
     },
     countCompanies: {
       type: Number,
       default: null,
-      reqiured: true,
+      required: true,
     },
     title: {
       type: String,
       default: null,
-      reqiured: true,
+      required: true,
     },
     desc: {
       type: String,
       default: null,
-      reqiured: true,
+      required: true,
     },
   },
 }

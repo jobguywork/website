@@ -105,42 +105,42 @@ export default {
     link: {
       type: String,
       default: null,
-      reuired: true,
+      required: true,
     },
     logo: {
       type: String,
       default: null,
-      reuired: true,
+      required: true,
     },
     name: {
       type: String,
       default: null,
-      reuired: true,
+      required: true,
     },
     salary: {
       type: String,
       default: null,
-      reuired: true,
+      required: true,
     },
     teamSize: {
       type: String,
       default: null,
-      reuired: true,
+      required: true,
     },
     founded: {
       type: String,
       default: null,
-      reuired: true,
+      required: true,
     },
     countReviews: {
       type: Number,
       default: null,
-      reuired: true,
+      required: true,
     },
     location: {
       type: String,
       default: null,
-      reuired: true,
+      required: true,
     },
     rate: {
       type: Number,

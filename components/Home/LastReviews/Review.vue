@@ -43,7 +43,7 @@ export default {
       default() {
         return {}
       },
-      reuired: true,
+      required: true,
     },
     type: {
       type: String,

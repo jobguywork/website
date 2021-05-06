@@ -8,12 +8,12 @@ export default {
     id: {
       type: Number,
       default: null,
-      requred: true,
+      required: true,
     },
     type: {
       type: String,
       default: 'review',
-      requred: true,
+      required: true,
     },
   },
   methods: {

@@ -14,7 +14,7 @@ export default {
     value: {
       type: String,
       default: '',
-      requred: true,
+      required: true,
     },
   },
   data: () => ({
