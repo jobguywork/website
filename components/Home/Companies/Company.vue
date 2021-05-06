@@ -32,7 +32,7 @@
                 <div class="layout-h">
                   <i class="fa fa-credit-card" />
                   <span class="text mr-5">
-                    {{ sallary }}
+                    {{ salary }}
                   </span>
                 </div>
               </li>
@@ -117,7 +117,7 @@ export default {
       default: null,
       reuired: true,
     },
-    sallary: {
+    salary: {
       type: String,
       default: null,
       reuired: true,
