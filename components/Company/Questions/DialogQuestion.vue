@@ -81,7 +81,7 @@ export default {
         return this.$store.state.company.question.dialog.question
       },
       set() {
-        this.$store.dispatch('company/question/togeleDialogQuestion')
+        this.$store.dispatch('company/question/toggleDialogQuestion')
       },
     },
   },
@@ -113,7 +113,7 @@ export default {
                 message: 'سوال شما با موفقیت ثبت شد.',
                 type: 'success',
               })
-              this.$store.dispatch('company/question/togeleDialogQuestion')
+              this.$store.dispatch('company/question/toggleDialogQuestion')
               await this.$store.dispatch('company/question/resetQuestions')
               await this.$store.dispatch('company/question/getQuestions', {
                 company: this.company.company_slug,

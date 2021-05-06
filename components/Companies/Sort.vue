@@ -21,7 +21,7 @@
         <i
           :class="{ active: visibleSearchMobile }"
           class="fa fa-search ml-5 hidden-sm-and-up"
-          @click="togeleSearch"
+          @click="toggleSearch"
         />
         <i
           :class="[display === 'grid' ? 'active' : '']"
@@ -90,7 +90,7 @@ export default {
     },
   },
   methods: {
-    togeleSearch() {
+    toggleSearch() {
       this.$store.commit('theme/TOGGLE_SEARCH_MOBILE')
     },
     onChangeDisplay(dispaly) {

@@ -90,7 +90,7 @@ export default {
         question,
         index,
       })
-      this.$store.dispatch('company/question/togeleDialogReply')
+      this.$store.dispatch('company/question/toggleDialogReply')
     },
     loadAnswes(question, index) {},
     async handleLike() {

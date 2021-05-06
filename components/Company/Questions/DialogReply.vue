@@ -64,7 +64,7 @@ export default {
         return this.$store.state.company.question.dialog.reply
       },
       set() {
-        this.$store.dispatch('company/question/togeleDialogReply')
+        this.$store.dispatch('company/question/toggleDialogReply')
       },
     },
     ...mapState('company/company', ['company']),
@@ -93,7 +93,7 @@ export default {
                 type: 'success',
               })
               this.$store.dispatch('company/question/incrementAnswers')
-              this.$store.dispatch('company/question/togeleDialogReply')
+              this.$store.dispatch('company/question/toggleDialogReply')
               await this.$store.dispatch('company/question/resetQuestions')
               await this.$store.dispatch('company/question/getQuestions', {
                 company: this.company.company_slug,

@@ -60,7 +60,7 @@ export default {
   },
   methods: {
     handeleQuestion() {
-      this.$store.dispatch('company/question/togeleDialogQuestion')
+      this.$store.dispatch('company/question/toggleDialogQuestion')
     },
     async infiniteHandler(state) {
       await this.$store.dispatch('company/question/getQuestions', {
