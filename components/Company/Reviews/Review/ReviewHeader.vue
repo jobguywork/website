@@ -34,8 +34,8 @@ export default {
   computed: {
     title() {
       const { company, title } = this.review
-      const perfix = 'تجربه کاری در شرکت'
-      return `${perfix} ${company.name}: ${title}`
+      const prefix = 'تجربه کاری در شرکت'
+      return `${prefix} ${company.name}: ${title}`
     },
     linkWidthSlug() {
       return `/review/${this.review.id}/${this.titleToSlug(this.review.title)}`
