@@ -75,7 +75,7 @@ export default {
   },
   data() {
     return {
-      quesiotnData: {},
+      questionData: {},
       vote: {
         vote_count: this.question.vote_count,
         down_vote_count: this.question.down_vote_count,
