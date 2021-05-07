@@ -29,6 +29,7 @@
     "nuxt-compress": "^5.0.0",
     "nuxt-seo": "^1.5.0",
     "perfect-scrollbar": "^1.5.0",
+    "string-strip-html": "^8.2.13",
     "stringz": "^2.1.0",
     "vue-apexcharts": "^1.6.1",
     "vue-count-to": "^1.0.13",
