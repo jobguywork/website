@@ -57,7 +57,7 @@ export const actions = {
       }
 
       commit(INCREMENT_PAGE_QUESTIONS)
-    } catch (error) { }
+    } catch (error) {}
   },
   toggleDialogQuestion({ commit }, payload) {
     commit(TOGGLE_DIALOG_QUESTION)
