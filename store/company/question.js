@@ -1,7 +1,7 @@
 import { PER_PAGE } from '@/config/app'
 
-const TOGELE_DIALOG_QUESTION = 'TOGELE_DIALOG_QUESTION'
-const TOGELE_DIALOG_REPLY = 'TOGELE_DIALOG_REPLY'
+const TOGGLE_DIALOG_QUESTION = 'TOGGLE_DIALOG_QUESTION'
+const TOGGLE_DIALOG_REPLY = 'TOGGLE_DIALOG_REPLY'
 const SET_QUESTION_REPLY = 'SET_TITLE_REPLY'
 const SET_QUESTIONS = 'SET_QUESTIONS'
 const PUSH_QUESTIONS = 'PUSH_QUESTIONS'
@@ -59,11 +59,11 @@ export const actions = {
       commit(INCREMENT_PAGE_QUESTIONS)
     } catch (error) {}
   },
-  togeleDialogQuestion({ commit }, payload) {
-    commit(TOGELE_DIALOG_QUESTION)
+  toggleDialogQuestion({ commit }, payload) {
+    commit(TOGGLE_DIALOG_QUESTION)
   },
-  togeleDialogReply({ commit }, payload) {
-    commit(TOGELE_DIALOG_REPLY)
+  toggleDialogReply({ commit }, payload) {
+    commit(TOGGLE_DIALOG_REPLY)
   },
   setQuestionReply({ commit }, payload) {
     commit(SET_QUESTION_REPLY, payload)
@@ -77,10 +77,10 @@ export const actions = {
 }
 
 export const mutations = {
-  [TOGELE_DIALOG_QUESTION](state) {
+  [TOGGLE_DIALOG_QUESTION](state) {
     state.dialog.question = !state.dialog.question
   },
-  [TOGELE_DIALOG_REPLY](state) {
+  [TOGGLE_DIALOG_REPLY](state) {
     state.dialog.reply = !state.dialog.reply
   },
   [SET_QUESTION_REPLY](state, payload) {

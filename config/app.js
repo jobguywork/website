@@ -1,4 +1,6 @@
 export const DOMAIN_TITLE = 'جاب گای'
+export const META_DESCRIPTION =
+  'جستجو و اشتراک دیدگاه ها در رابطه با استخدام، حقوق، تجربه کاری، مزایا و معایب در شرکت های ایرانی'
 export const BASE_URL = 'https://jobguy.work'
 export const BASE_URL_MEDIA = `${BASE_URL}`
 export const PER_PAGE = 18
@@ -6,6 +8,8 @@ export const DEBUG = true
 export const CACHE_TIME = 60
 export const UPLOAD_URL = 'https://upload.jobguy.work'
 export const MEDIA_URL = 'https://media.jobguy.work'
+export const TWITTER = '@JobguyIR'
+export const GOOGLE_ANALYTICS = 'UA-135891606-1'
 
 export const WALLETS = [
   {

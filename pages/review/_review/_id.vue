@@ -48,7 +48,6 @@
 
 <script>
 import { mapState } from 'vuex'
-import { DOMAIN_TITLE, BASE_URL } from '@/config/app.js'
 import Review from '@/components/Company/Reviews/Review/Review'
 import Cover from '@/components/Company/Cover.vue'
 import Comments from '@/components/Comments/Comments'
@@ -90,46 +89,16 @@ export default {
       loading: false,
     }
   },
+
   head() {
-    let meta = []
-    meta = [
-      {
-        hid: 'og:site_name',
-        property: 'og:site_name',
-        content: DOMAIN_TITLE,
-      },
-      {
-        hid: 'og:title',
-        property: 'og:title',
-        content: `${this.review.title} - ${this.company.name}`,
-      },
-      {
-        hid: 'og:description',
-        property: 'og:description',
-        content: this.cutString(this.review.description, 180),
-      },
-      {
-        hid: 'og:type',
-        property: 'og:type',
-        content: 'company',
-      },
-      {
-        hid: 'og:url',
-        property: 'og:url',
-        content: `${BASE_URL}/review/${this.review.id}`,
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: this.cutString(this.company.description, 180),
-      },
-    ]
     return {
+      ...this.$seo({
+        title: `تجربه کاری در شرکت ${this.company.name}: ${this.review.title}`,
+        description: this.cutString(this.review.description, 180),
+      }),
       bodyAttrs: {
         class: `page-review-details company-${this.company.company_slug}`,
       },
-      title: `تجربه کاری در شرکت ${this.company.name}: ${this.review.title}`,
-      meta,
     }
   },
   computed: {

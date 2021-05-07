@@ -8,7 +8,7 @@
     >
       <ElCol :xs="24" :sm="24" :md="24" :lg="20" :xl="20">
         <ElCard class="mb-50" :body-style="{ padding: '10px' }">
-          <div class="contetn rtl">
+          <div class="content rtl">
             <div class="html">
               <h1>آیا فعالیت جاب گای قانونی است؟</h1>
               <p>
@@ -110,8 +110,6 @@
 </template>
 
 <script>
-import { DOMAIN_TITLE } from '@/config/app.js'
-
 export default {
   data() {
     return {
@@ -126,28 +124,13 @@ export default {
     } catch (error) {}
   },
   head() {
-    let meta = []
-    meta = [
-      {
-        property: 'og:site_name',
-        content: DOMAIN_TITLE,
-      },
-      {
-        property: 'og:title',
-        content: DOMAIN_TITLE,
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: '',
-      },
-    ]
     return {
+      ...this.$seo({
+        title: 'سوالات متداول',
+      }),
       bodyAttrs: {
         class: 'page-faq',
       },
-      title: 'سوالات متداول',
-      meta,
     }
   },
 }

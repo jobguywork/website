@@ -15,7 +15,6 @@
 import ReviewForm from '@/components/Company/Reviews/ReviewForm/ReviewForm'
 import { mapState } from 'vuex'
 import moment from 'moment-jalaali'
-import { DOMAIN_TITLE } from '@/config/app.js'
 
 export default {
   components: {
@@ -55,28 +54,13 @@ export default {
     }
   },
   head() {
-    let meta = []
-    meta = [
-      {
-        property: 'og:site_name',
-        content: DOMAIN_TITLE,
-      },
-      {
-        property: 'og:title',
-        content: `ویرایش تجربه کاری: ${this.review.title}`,
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: '',
-      },
-    ]
     return {
+      ...this.$seo({
+        title: `ویرایش تجربه کاری: ${this.review.title}`,
+      }),
       bodyAttrs: {
         class: 'company-questions-page',
       },
-      title: `ویرایش تجربه کاری: ${this.review.title}`,
-      meta,
     }
   },
   computed: {

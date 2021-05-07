@@ -43,7 +43,7 @@ export default {
       default() {
         return {}
       },
-      reuired: true,
+      required: true,
     },
     type: {
       type: String,
@@ -58,9 +58,9 @@ export default {
   computed: {
     title() {
       const { company, title } = this.data
-      const perfix =
+      const prefix =
         this.type === 'review' ? 'تجربه کاری در شرکت' : 'تجربه مصاحبه در شرکت'
-      return `${perfix} ${company.name}: ${title}`
+      return `${prefix} ${company.name}: ${title}`
     },
     link() {
       return `/${this.type}/${this.data.id}/${this.titleToSlug(

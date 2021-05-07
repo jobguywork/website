@@ -93,7 +93,6 @@ import Questions from '@/components/Company/Questions/Questions.vue'
 import Gallery from '@/components/Company/Gallery.vue'
 import About from '@/components/Company/About.vue'
 import Salary from '@/components/Company/Salary/Salary.vue'
-import { DOMAIN_TITLE, BASE_URL } from '@/config/app.js'
 
 export default {
   components: {
@@ -131,58 +130,20 @@ export default {
     }
   },
   head() {
-    let meta = []
-    meta = [
-      {
-        hid: 'og:site_name',
-        property: 'og:site_name',
-        content: DOMAIN_TITLE,
-      },
-      {
-        hid: 'og:title',
-        property: 'og:title',
-        content: `شرکت ${this.company.name} - ${this.company.name_en}`,
-      },
-      {
-        hid: 'og:description',
-        property: 'og:description',
-        content: this.cutString(this.company.description, 180),
-      },
-      {
-        hid: 'og:type',
-        property: 'og:type',
-        content: 'company',
-      },
-      {
-        hid: 'og:url',
-        property: 'og:url',
-        content: `${BASE_URL}/company/${this.company.company_slug}`,
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: this.cutString(this.company.description, 180),
-      },
-    ]
-    if (this.company.gallery.length > 0) {
-      this.company.gallery.forEach((element) => {
-        meta.push({
-          property: 'og:image',
-          content: this.mediaUrl(element.path),
-        })
-      })
-    } else {
-      meta.push({
-        property: 'og:image',
-        content: this.mediaUrl(this.company.logo),
-      })
-    }
     return {
+      ...this.$seo({
+        title: `تجربه کاری در شرکت ${this.company.name} - ${this.company.name_en}`,
+        description: this.cutString(this.company.description, 180),
+        openGraph: {
+          image: {
+            url: this.mediaUrl(this.company.logo),
+            alt: this.company.name,
+          },
+        },
+      }),
       bodyAttrs: {
         class: `company-page company-${this.company.company_slug}`,
       },
-      title: `تجربه کاری در شرکت ${this.company.name} - ${this.company.name_en}`,
-      meta,
     }
   },
   computed: {

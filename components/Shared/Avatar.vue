@@ -11,12 +11,12 @@ export default {
     src: {
       type: String,
       default: null,
-      requred: true,
+      required: true,
     },
     alt: {
       type: String,
       default: null,
-      requred: true,
+      required: true,
     },
     size: {
       type: Number,

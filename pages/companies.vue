@@ -17,7 +17,7 @@
         v-model="order_by"
         :total="total"
         @sort="onFilters"
-        @dispaly="onDisplay"
+        @display="onDisplay"
       />
       <!-- /sort -->
       <!-- listings -->
@@ -56,7 +56,7 @@
 
 <script>
 import { mapState } from 'vuex'
-import { DOMAIN_TITLE, PER_PAGE } from '@/config/app.js'
+import { PER_PAGE } from '@/config/app.js'
 import Company from '@/components/Companies/Company'
 import Sort from '@/components/Companies/Sort'
 import Sidebar from '@/components/Companies/Sidebar'
@@ -104,28 +104,13 @@ export default {
     } catch (error) {}
   },
   head() {
-    let meta = []
-    meta = [
-      {
-        property: 'og:site_name',
-        content: DOMAIN_TITLE,
-      },
-      {
-        property: 'og:title',
-        content: DOMAIN_TITLE,
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: '',
-      },
-    ]
     return {
+      ...this.$seo({
+        title: 'شرکت ها',
+      }),
       bodyAttrs: {
         class: 'companies-page',
       },
-      title: 'شرکت ها',
-      meta,
     }
   },
   computed: {

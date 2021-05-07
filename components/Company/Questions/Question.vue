@@ -25,7 +25,7 @@
               class="item"
               type="primary"
             >
-              <el-button size="small" @click="loadAnswes(question, index)">
+              <el-button size="small" @click="loadAnswers(question, index)">
                 <i class="fa fa-comments ml-5" />
                 <!-- <span>نمایش جواب ها</span> -->
               </el-button>
@@ -75,7 +75,7 @@ export default {
   },
   data() {
     return {
-      quesiotnData: {},
+      questionData: {},
       vote: {
         vote_count: this.question.vote_count,
         down_vote_count: this.question.down_vote_count,
@@ -90,9 +90,9 @@ export default {
         question,
         index,
       })
-      this.$store.dispatch('company/question/togeleDialogReply')
+      this.$store.dispatch('company/question/toggleDialogReply')
     },
-    loadAnswes(question, index) {},
+    loadAnswers(question, index) {},
     async handleLike() {
       if (this.vote.vote_state === 'NONE' || this.vote.vote_state === 'DOWN') {
         try {

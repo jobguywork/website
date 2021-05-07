@@ -8,7 +8,7 @@
     >
       <ElCol :xs="24" :sm="24" :md="24" :lg="20" :xl="20">
         <ElCard class="mb-50" :body-style="{ padding: '10px' }">
-          <div class="contetn rtl">
+          <div class="content rtl">
             <img
               src="/images/contact-us.webp"
               alt="ایجاد شرکت جدید"
@@ -45,32 +45,15 @@
 </template>
 
 <script>
-import { DOMAIN_TITLE } from '@/config/app.js'
-
 export default {
   head() {
-    let meta = []
-    meta = [
-      {
-        property: 'og:site_name',
-        content: DOMAIN_TITLE,
-      },
-      {
-        property: 'og:title',
-        content: DOMAIN_TITLE,
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: '',
-      },
-    ]
     return {
+      ...this.$seo({
+        title: 'تماس با ما',
+      }),
       bodyAttrs: {
         class: 'page-contact',
       },
-      title: 'تماس با ما',
-      meta,
     }
   },
 }
@@ -87,7 +70,7 @@ export default {
       height: auto;
     }
   }
-  .contetn {
+  .content {
     line-height: 28px;
   }
   .create-company {

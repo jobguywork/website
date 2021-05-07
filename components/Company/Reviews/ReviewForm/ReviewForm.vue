@@ -567,7 +567,7 @@ export default {
           break
       }
       return (
-        this.converNum2persian(this.form.salaryAmount) + ' تومان در ' + period
+        this.convertNum2persian(this.form.salaryAmount) + ' تومان در ' + period
       )
     },
     async onSubmit() {

@@ -9,7 +9,7 @@
       </div>
       <div class="state">
         <span class="text">
-          {{ iterviewStatusString(interview.status) }}
+          {{ interviewStatusString(interview.status) }}
         </span>
       </div>
     </div>

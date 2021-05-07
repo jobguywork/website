@@ -14,7 +14,6 @@
 <script>
 import moment from 'moment-jalaali'
 import { mapState } from 'vuex'
-import { DOMAIN_TITLE } from '@/config/app.js'
 import InterviewForm from '@/components/Company/Interview/InterviewForm/InterviewForm'
 
 export default {
@@ -42,28 +41,13 @@ export default {
     }
   },
   head() {
-    let meta = []
-    meta = [
-      {
-        property: 'og:site_name',
-        content: DOMAIN_TITLE,
-      },
-      {
-        property: 'og:title',
-        content: `اشتراک مصاحبه کاری در ${this.company.name} - ${DOMAIN_TITLE}`,
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: '',
-      },
-    ]
     return {
+      ...this.$seo({
+        title: `اشتراک مصاحبه کاری در ${this.company.name}`,
+      }),
       bodyAttrs: {
         class: 'company-interview-page',
       },
-      title: `اشتراک مصاحبه کاری در ${this.company.name} - ${DOMAIN_TITLE}`,
-      meta,
     }
   },
   computed: {
@@ -128,7 +112,7 @@ export default {
       }
     },
     helpToman(value) {
-      return this.converNum2persian(value) + ' تومان در ماه'
+      return this.convertNum2persian(value) + ' تومان در ماه'
     },
   },
 }

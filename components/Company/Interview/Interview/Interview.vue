@@ -4,9 +4,9 @@
       <!-- header -->
       <InterviewHeader :interview="interview" :single="single" />
       <!-- /header -->
-      <!-- wrap-contetn -->
+      <!-- wrap-content -->
       <InterviewContent :details="details" :interview="interview" />
-      <!-- /wrap-contetn -->
+      <!-- /wrap-content -->
       <!-- footer -->
       <InterviewFooter :details="details" :interview="interview" />
       <!-- /footer -->
