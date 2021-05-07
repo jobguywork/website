@@ -28,7 +28,7 @@
           :link="`/company/${item.company_slug}`"
           :logo="item.logo"
           :name="item.name"
-          :sallary="`${item.salary_min}-${item.salary_max}`"
+          :salary="`${item.salary_min}-${item.salary_max}`"
           :team-size="item.size"
           :founded="item.founded"
           :count-reviews="item.total_review"

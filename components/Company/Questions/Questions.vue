@@ -6,7 +6,7 @@
         <i class="fa fa-edit fa-lg ml-10" />
         <div class="label mt-5">پرسش پاسخ</div>
       </div>
-      <el-button size="mini" type="primary" @click="handeleQuestion">
+      <el-button size="mini" type="primary" @click="handleQuestion">
         سوال جدید
       </el-button>
     </div>
@@ -30,7 +30,7 @@
     </div>
     <Empty v-else class="mt-20">
       <p>اولین نفر باش که سوال می پرسی!</p>
-      <el-button size="mini" type="primary" @click="handeleQuestion">
+      <el-button size="mini" type="primary" @click="handleQuestion">
         سوال جدید
       </el-button>
     </Empty>
@@ -59,8 +59,8 @@ export default {
     ...mapState('company/question', ['questions']),
   },
   methods: {
-    handeleQuestion() {
-      this.$store.dispatch('company/question/togeleDialogQuestion')
+    handleQuestion() {
+      this.$store.dispatch('company/question/toggleDialogQuestion')
     },
     async infiniteHandler(state) {
       await this.$store.dispatch('company/question/getQuestions', {

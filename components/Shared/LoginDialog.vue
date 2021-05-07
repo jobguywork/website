@@ -1,6 +1,6 @@
 <template>
   <el-dialog :visible.sync="dialogVisible" title="ورود / ثبت‌نام" width="320px">
-    <div class="dialog-contetn pb-10">
+    <div class="dialog-content pb-10">
       <AuthForm class="mt-20" />
     </div>
   </el-dialog>
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.dialog-contetn {
+.dialog-content {
   .title {
     span {
       font-weight: 400;

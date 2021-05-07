@@ -55,7 +55,7 @@ export const general = {
     cutString(str, limitString) {
       return str ? substr(str, 0, limitString) : ''
     },
-    converNum2persian(number) {
+    convertNum2persian(number) {
       number = toNumber(number)
       if (isNumber(number)) {
         return Num2persian(number)
@@ -67,7 +67,7 @@ export const general = {
     gregorianToJalali(date, formatInput, formatOutput) {
       return momentJalaali(date, formatInput).format(formatOutput)
     },
-    iterviewStatusString(status) {
+    interviewStatusString(status) {
       switch (status) {
         case 'WORKING':
           return 'پذیرفته شدم اما خودم رد کردم'

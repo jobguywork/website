@@ -34,8 +34,8 @@ export default {
   computed: {
     title() {
       const { company, title } = this.interview
-      const perfix = 'تجربه مصاحبه در شرکت'
-      return `${perfix} ${company.name}: ${title}`
+      const prefix = 'تجربه مصاحبه در شرکت'
+      return `${prefix} ${company.name}: ${title}`
     },
     linkWidthSlug() {
       return `/interview/${this.interview.id}/${this.titleToSlug(

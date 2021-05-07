@@ -8,7 +8,7 @@
     >
       <ElCol :xs="24" :sm="24" :md="24" :lg="20" :xl="20">
         <ElCard class="mb-50" :body-style="{ padding: '10px' }">
-          <div class="contetn rtl">
+          <div class="content rtl">
             <div class="html">
               <h1>آیا فعالیت جاب گای قانونی است؟</h1>
               <p>

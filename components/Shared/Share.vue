@@ -10,7 +10,7 @@ export default {
     link: {
       type: String,
       default: null,
-      requred: true,
+      required: true,
     },
   },
   methods: {

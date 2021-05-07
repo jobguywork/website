@@ -32,7 +32,7 @@
                 <div class="layout-h">
                   <i class="fa fa-credit-card" />
                   <span class="text mr-5">
-                    {{ sallary }}
+                    {{ salary }}
                   </span>
                 </div>
               </li>
@@ -105,42 +105,42 @@ export default {
     link: {
       type: String,
       default: null,
-      reuired: true,
+      required: true,
     },
     logo: {
       type: String,
       default: null,
-      reuired: true,
+      required: true,
     },
     name: {
       type: String,
       default: null,
-      reuired: true,
+      required: true,
     },
-    sallary: {
+    salary: {
       type: String,
       default: null,
-      reuired: true,
+      required: true,
     },
     teamSize: {
       type: String,
       default: null,
-      reuired: true,
+      required: true,
     },
     founded: {
       type: String,
       default: null,
-      reuired: true,
+      required: true,
     },
     countReviews: {
       type: Number,
       default: null,
-      reuired: true,
+      required: true,
     },
     location: {
       type: String,
       default: null,
-      reuired: true,
+      required: true,
     },
     rate: {
       type: Number,

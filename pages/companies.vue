@@ -17,7 +17,7 @@
         v-model="order_by"
         :total="total"
         @sort="onFilters"
-        @dispaly="onDisplay"
+        @display="onDisplay"
       />
       <!-- /sort -->
       <!-- listings -->
