@@ -8,7 +8,7 @@
 <script>
 import DonateForm from '@/components/Donate/DonateForm'
 import Wallets from '@/components/Donate/Wallets'
-import { DOMAIN_TITLE, WALLETS } from '@/config/app.js'
+import { WALLETS } from '@/config/app.js'
 
 export default {
   components: {
@@ -21,28 +21,14 @@ export default {
     }
   },
   head() {
-    let meta = []
-    meta = [
-      {
-        property: 'og:site_name',
-        content: DOMAIN_TITLE,
-      },
-      {
-        property: 'og:title',
-        content: DOMAIN_TITLE,
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: '',
-      },
-    ]
     return {
+      ...this.$seo({
+        title: 'حمایت مالی',
+      }),
       bodyAttrs: {
         class: 'page-donate',
       },
       title: 'حمایت مالی',
-      meta,
     }
   },
 }

@@ -81,7 +81,6 @@
 <script>
 import omitBy from 'lodash/omitBy'
 import isEmpty from 'lodash/isEmpty'
-import { DOMAIN_TITLE } from '@/config/app.js'
 import Crop from '@/components/Shared/Crop.vue'
 import VerifyForm from '~/components/Auth/VerifyForm.vue'
 
@@ -120,23 +119,13 @@ export default {
     }
   },
   head() {
-    let meta = []
-    meta = [
-      {
-        property: 'og:site_name',
-        content: DOMAIN_TITLE,
-      },
-      {
-        property: 'og:title',
-        content: DOMAIN_TITLE,
-      },
-    ]
     return {
+      ...this.$seo({
+        title: 'تنظیمات پروفایل',
+      }),
       bodyAttrs: {
         class: 'settings-page',
       },
-      title: 'تنظیمات پروفایل',
-      meta,
     }
   },
   mounted() {

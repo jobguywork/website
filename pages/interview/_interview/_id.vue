@@ -48,7 +48,6 @@
 
 <script>
 import { mapState } from 'vuex'
-import { DOMAIN_TITLE, BASE_URL } from '@/config/app.js'
 import Interview from '@/components/Company/Interview/Interview/Interview'
 import Cover from '@/components/Company/Cover.vue'
 import Comments from '@/components/Comments/Comments'
@@ -90,45 +89,14 @@ export default {
     }
   },
   head() {
-    let meta = []
-    meta = [
-      {
-        hid: 'og:site_name',
-        property: 'og:site_name',
-        content: DOMAIN_TITLE,
-      },
-      {
-        hid: 'og:title',
-        property: 'og:title',
-        content: `${this.interview.title} - ${this.company.name}`,
-      },
-      {
-        hid: 'og:description',
-        property: 'og:description',
-        content: this.cutString(this.interview.description, 180),
-      },
-      {
-        hid: 'og:type',
-        property: 'og:type',
-        content: 'company',
-      },
-      {
-        hid: 'og:url',
-        property: 'og:url',
-        content: `${BASE_URL}/review/${this.interview.id}`,
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: this.cutString(this.company.description, 180),
-      },
-    ]
     return {
+      ...this.$seo({
+        title: `تجربه مصاحبه در شرکت ${this.company.name}: ${this.interview.title}`,
+        description: this.cutString(this.company.description, 180),
+      }),
       bodyAttrs: {
         class: 'page-review-details',
       },
-      title: `تجربه مصاحبه در شرکت ${this.company.name}: ${this.interview.title}`,
-      meta,
     }
   },
   computed: {

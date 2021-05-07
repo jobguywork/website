@@ -14,7 +14,6 @@
 <script>
 import moment from 'moment-jalaali'
 import { mapState } from 'vuex'
-import { DOMAIN_TITLE } from '@/config/app.js'
 import InterviewForm from '@/components/Company/Interview/InterviewForm/InterviewForm'
 import lscache from 'lscache'
 
@@ -45,28 +44,13 @@ export default {
     }
   },
   head() {
-    let meta = []
-    meta = [
-      {
-        property: 'og:site_name',
-        content: DOMAIN_TITLE,
-      },
-      {
-        property: 'og:title',
-        content: `اشتراک مصاحبه کاری در ${this.company.name} - ${DOMAIN_TITLE}`,
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: '',
-      },
-    ]
     return {
+      ...this.$seo({
+        title: `اشتراک مصاحبه کاری در ${this.company.name}`,
+      }),
       bodyAttrs: {
         class: 'company-interview-page',
       },
-      title: `اشتراک مصاحبه کاری در ${this.company.name} - ${DOMAIN_TITLE}`,
-      meta,
     }
   },
   computed: {

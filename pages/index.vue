@@ -72,7 +72,7 @@
 </template>
 
 <script>
-import { DOMAIN_TITLE } from '@/config/app.js'
+// import { DOMAIN_TITLE } from '@/config/app.js'
 import IntroBanner from '@/components/Home/IntroBanner'
 import PopularCategories from '@/components/Home/PopularCategories/PopularCategories'
 import Companies from '@/components/Home/Companies/Companies'
@@ -105,31 +105,13 @@ export default {
     } catch (error) {}
   },
   head() {
-    let meta = []
-    meta = [
-      {
-        hid: 'og:site_name',
-        property: 'og:site_name',
-        content: DOMAIN_TITLE,
-      },
-      {
-        hid: 'og:title',
-        property: 'og:title',
-        content: `${DOMAIN_TITLE} - تجربه کاری برای همه`,
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content:
-          'جستجو و اشتراک دیدگاه ها در رابطه با استخدام، حقوق، تجربه کاری، مزایا و معایب در شرکت های ایرانی',
-      },
-    ]
     return {
+      ...this.$seo({
+        title: 'تجربه کاری برای همه',
+      }),
       bodyAttrs: {
         class: 'home-page',
       },
-      title: 'تجربه کاری برای همه',
-      meta,
     }
   },
 }

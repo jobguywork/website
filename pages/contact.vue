@@ -45,32 +45,15 @@
 </template>
 
 <script>
-import { DOMAIN_TITLE } from '@/config/app.js'
-
 export default {
   head() {
-    let meta = []
-    meta = [
-      {
-        property: 'og:site_name',
-        content: DOMAIN_TITLE,
-      },
-      {
-        property: 'og:title',
-        content: DOMAIN_TITLE,
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: '',
-      },
-    ]
     return {
+      ...this.$seo({
+        title: 'تماس با ما',
+      }),
       bodyAttrs: {
         class: 'page-contact',
       },
-      title: 'تماس با ما',
-      meta,
     }
   },
 }

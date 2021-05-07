@@ -15,7 +15,6 @@
 import ReviewForm from '@/components/Company/Reviews/ReviewForm/ReviewForm'
 import { mapState } from 'vuex'
 import moment from 'moment-jalaali'
-import { DOMAIN_TITLE } from '@/config/app.js'
 import lscache from 'lscache'
 
 export default {
@@ -56,28 +55,13 @@ export default {
     }
   },
   head() {
-    let meta = []
-    meta = [
-      {
-        property: 'og:site_name',
-        content: DOMAIN_TITLE,
-      },
-      {
-        property: 'og:title',
-        content: `اشتراک تجربه کاری در ${this.company.name} - ${DOMAIN_TITLE}`,
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: '',
-      },
-    ]
     return {
+      ...this.$seo({
+        title: `اشتراک تجربه کاری در ${this.company.name}`,
+      }),
       bodyAttrs: {
         class: 'company-questions-page',
       },
-      title: `اشتراک تجربه کاری در ${this.company.name} - ${DOMAIN_TITLE}`,
-      meta,
     }
   },
   computed: {
