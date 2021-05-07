@@ -8,8 +8,8 @@
         <client-only>
           <Vote
             :vote="vote"
-            :handle-like="handleLike"
-            :handle-dislike="handleDislike"
+            :handle-like="onLike"
+            :handle-dislike="onDislike"
           />
         </client-only>
       </div>
@@ -21,7 +21,12 @@
       </div>
     </div>
     <div v-if="!details" class="left-side">
-      <el-button size="mini" @click="handleRedirect"> جزئیات </el-button>
+      <nuxt-link
+        class="el-button el-button--default el-button--mini"
+        :to="linkWidthSlug"
+      >
+        جزئیات
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -68,7 +73,7 @@ export default {
     },
   },
   methods: {
-    async handleLike() {
+    async onLike() {
       if (this.vote.vote_state === 'NONE' || this.vote.vote_state === 'DOWN') {
         try {
           const res = await this.$axios.get(
@@ -89,7 +94,7 @@ export default {
         } catch (error) {}
       }
     },
-    async handleDislike() {
+    async onDislike() {
       if (this.vote.vote_state === 'NONE' || this.vote.vote_state === 'UP') {
         try {
           const res = await this.$axios.get(
@@ -109,9 +114,6 @@ export default {
           this.vote.down_vote_count = res.data.data.down_vote_count
         } catch (error) {}
       }
-    },
-    handleRedirect() {
-      this.$router.push(this.linkWidthSlug)
     },
   },
 }
