@@ -45,7 +45,6 @@
 </template>
 
 <script>
-import { DOMAIN_TITLE } from '@/config/app.js'
 import Edit from '@/components/Shared/Edit'
 
 export default {
@@ -60,23 +59,13 @@ export default {
     }
   },
   head() {
-    let meta = []
-    meta = [
-      {
-        property: 'og:site_name',
-        content: DOMAIN_TITLE,
-      },
-      {
-        property: 'og:title',
-        content: DOMAIN_TITLE,
-      },
-    ]
     return {
+      ...this.$seo({
+        title: 'مصاحبه های من',
+      }),
       bodyAttrs: {
         class: 'settings-page',
       },
-      title: `مصاحبه های من - ${DOMAIN_TITLE}`,
-      meta,
     }
   },
   mounted() {

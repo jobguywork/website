@@ -1,4 +1,4 @@
-const pkg = require('./package')
+const config = require('./config/app')
 
 module.exports = {
   telemetry: false,
@@ -12,60 +12,34 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s - جاب گای',
+    titleTemplate: `%s - ${config.DOMAIN_TITLE}`,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description },
       {
-        hid: 'og:title',
-        name: 'og:title',
-        content: 'جاب گای',
-      },
-      {
-        hid: 'og:site_name',
-        name: 'og:site_name',
-        content: 'جاب گای',
-      },
-      {
-        hid: 'og:url',
-        name: 'og:url',
-        content: 'https://jobguy.work/',
-      },
-      {
-        hid: 'og:url',
-        name: 'og:url',
-        content: 'https://jobguy.work/',
-      },
-      {
-        hid: 'og:description',
-        name: 'og:description',
-        content: pkg.description,
-      },
-      {
-        hid: 'og:url',
-        name: 'og:url',
-        content: 'website',
-      },
-      {
-        hid: 'og:image',
-        name: 'og:image',
-        content: 'https://jobguy.work/images/logo.png',
+        hid: 'description',
+        name: 'description',
+        content: config.META_DESCRIPTION,
       },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href: '/fonts/vazir/font.css',
-        defer: true,
+  },
+  seo: {
+    lang: 'fa',
+    language: 'Persian',
+    baseUrl: config.BASE_URL,
+    name: config.DOMAIN_TITLE,
+    title: config.DOMAIN_TITLE,
+    description: config.META_DESCRIPTION,
+    openGraph: {
+      image: {
+        url: `${config.BASE_URL}/images/og-jobguy.jpg`,
+        alt: config.DOMAIN_TITLE,
       },
-      {
-        rel: 'stylesheet',
-        href: '/fonts/jobguy/style.css',
-        defer: true,
-      },
-    ],
+    },
+    twitter: {
+      site: '@JobguyIR',
+      card: 'summary_large_image',
+    },
   },
 
   /*
@@ -75,7 +49,11 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ['assets/styles/main.scss'],
+  css: [
+    'assets/styles/fonts/vazir/font.css',
+    'assets/styles/fonts/jobguy/style.css',
+    'assets/styles/main.scss',
+  ],
 
   styleResources: {
     // your settings here
@@ -154,6 +132,7 @@ module.exports = {
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
     'cookie-universal-nuxt',
+    'nuxt-seo',
   ],
   /*
    ** Axios module configuration
@@ -174,7 +153,7 @@ module.exports = {
   },
 
   googleAnalytics: {
-    id: 'UA-135891606-1',
+    id: config.GOOGLE_ANALYTICS,
   },
 
   /*
