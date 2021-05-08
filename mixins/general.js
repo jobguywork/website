@@ -1,8 +1,8 @@
 // import timeago from 'timeago.js'
 import { MEDIA_URL } from '@/config/app'
 import Num2persian from '@/plugins/Num2persian'
+import { slug } from '@/utils/slug'
 import { stripHTML } from '@/utils/stripHtml'
-import arslugify from 'arslugify'
 import isNumber from 'lodash/isNumber'
 import toNumber from 'lodash/toNumber'
 import momentJalaali from 'moment-jalaali'
@@ -64,7 +64,7 @@ export const general = {
       }
     },
     titleToSlug(title) {
-      return arslugify(title)
+      return slug(title)
     },
     gregorianToJalali(date, formatInput, formatOutput) {
       return momentJalaali(date, formatInput).format(formatOutput)
