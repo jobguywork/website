@@ -8,7 +8,6 @@
     </div>
     <div class="content">
       <h3>{{ title }}</h3>
-      <!-- <p>{{ desc }}</p> -->
     </div>
   </nuxt-link>
 </template>
@@ -32,11 +31,6 @@ export default {
       required: true,
     },
     title: {
-      type: String,
-      default: null,
-      required: true,
-    },
-    desc: {
       type: String,
       default: null,
       required: true,
