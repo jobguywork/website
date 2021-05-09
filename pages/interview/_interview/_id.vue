@@ -92,7 +92,7 @@ export default {
     return {
       ...this.$seo({
         title: `تجربه مصاحبه در شرکت ${this.company.name}: ${this.interview.title}`,
-        description: this.cutString(this.company.description, 180),
+        description: this.cutString(this.interview.description, 180),
       }),
       bodyAttrs: {
         class: 'page-review-details',
