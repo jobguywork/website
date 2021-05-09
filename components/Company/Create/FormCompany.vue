@@ -8,7 +8,11 @@
           </ElFormItem>
         </ElCol>
         <ElCol :xs="24" :sm="24" :md="12">
-          <ElFormItem prop="name_en" label="نام شرکت (English)">
+          <ElFormItem
+            prop="name_en"
+            class="ltr-input"
+            label="نام شرکت (English)"
+          >
             <ElInput v-model="form.name_en" placeholder="نام شرکت (English)" />
           </ElFormItem>
         </ElCol>
