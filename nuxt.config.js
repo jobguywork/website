@@ -37,7 +37,7 @@ module.exports = {
       },
     },
     twitter: {
-      site: '@JobguyIR',
+      site: config.TWITTER,
       card: 'summary_large_image',
     },
   },
