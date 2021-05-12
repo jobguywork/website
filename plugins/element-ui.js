@@ -2,7 +2,7 @@ import {
   Alert,
   Aside,
   Autocomplete,
-  // Avatar,
+  Avatar,
   //   Upload,
   //   Progress,
   //   Spinner,
@@ -157,7 +157,7 @@ Vue.use(Main)
 // Vue.use(Link)
 Vue.use(Divider)
 Vue.use(Image)
-// Vue.use(Avatar)
+Vue.use(Avatar)
 // Vue.use(Calendar)
 // Vue.use(Backtop)
 // Vue.use(PageHeader)

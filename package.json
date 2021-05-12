@@ -34,14 +34,12 @@
     "vue-count-to": "^1.0.13",
     "vue-gallery": "^2.0.1",
     "vue-hellojs": "^0.0.4",
-    "vue-image-crop-upload": "^2.5.0",
     "vue-infinite-loading": "^2.4.5",
     "vue-persian-datetime-picker": "^2.6.0",
     "vue-raven": "^1.0.3",
     "vue2-medium-editor": "^1.1.6"
   },
   "devDependencies": {
-    "@architect/sandbox": "^3.4.3",
     "@babel/preset-env": "^7.14.0",
     "@nuxtjs/device": "^2.1.0",
     "@nuxtjs/dotenv": "^1.4.1",

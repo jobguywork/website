@@ -1,0 +1,16 @@
+.g-core-image-upload-btn{
+  form{
+    input{
+      cursor: pointer;
+    }
+  }
+}
+
+.g-core-image-corp-container{
+  direction: ltr;
+
+  .info-aside{
+    direction: rtl;
+    height: 48px;
+  }
+}

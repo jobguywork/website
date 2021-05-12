@@ -18,5 +18,6 @@ module.exports = {
     'no-console': 'off',
     'nuxt/no-cjs-in-config': 'off',
     'vue/no-v-html': 'off',
+    'vue/require-prop-types': 'off',
   },
 }

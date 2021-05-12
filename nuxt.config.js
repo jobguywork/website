@@ -94,7 +94,7 @@ module.exports = {
       ssr: false,
     },
     {
-      src: '@/plugins/crop',
+      src: '@/plugins/core-image-upload',
       ssr: false,
     },
     {
