@@ -57,7 +57,7 @@
 
       <ElFormItem v-if="$isLogin" prop="logo" label="لوگو" class="mt-10">
         <client-only>
-          <Crop v-model="form.logo" :width="200" :height="200" preview />
+          <UploadImage v-model="form.logo" :min-width="250" :max-width="250" />
         </client-only>
       </ElFormItem>
 
@@ -73,13 +73,13 @@
 <script>
 import Industry from '@/components/Shared/Industry'
 import City from '@/components/Shared/City'
-import Crop from '@/components/Shared/Crop.vue'
+import UploadImage from '@/components/Shared/UploadImage'
 
 export default {
   components: {
     Industry,
     City,
-    Crop,
+    UploadImage,
   },
   props: {
     value: {

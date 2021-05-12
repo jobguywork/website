@@ -1,5 +1,5 @@
 <template>
-  <div class="auth-form">
+  <div class="auth-form pb-10">
     <ElTabs stretch>
       <ElTabPane label="ورود">
         <LoginForm />
