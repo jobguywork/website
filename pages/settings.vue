@@ -1,51 +1,51 @@
 <template>
   <div class="container">
     <div class="settings-wrap">
-      <el-form
+      <ElForm
         ref="form"
         :model="form"
         :rules="rules"
         label-position="top"
         label-width="120px"
       >
-        <el-tabs type="border-card" tab-position="right" style="height: 240px">
+        <ElTabs type="border-card" tab-position="right" style="height: 250px">
           <!-- Information -->
-          <el-tab-pane class="information">
+          <ElTabPane class="information">
             <span slot="label">
               <div class="rtl">
                 <span class="label"> مشخصات </span>
               </div>
             </span>
             <div class="tab-content">
-              <div class="layout-h info-tab">
+              <div class="layout-h layout-justified info-tab">
                 <div class="form-wrap">
                   <div class="item rtl">
-                    <el-form-item label="نام" prop="first_name">
+                    <ElFormItem label="نام" prop="first_name">
                       <el-input v-model="form.first_name" placeholder="نام" />
-                    </el-form-item>
+                    </ElFormItem>
                   </div>
                   <div class="item rtl">
-                    <el-form-item label="نام خانوادگی" prop="last_name">
-                      <el-input
+                    <ElFormItem label="نام خانوادگی" prop="last_name">
+                      <ElInput
                         v-model="form.last_name"
                         placeholder="نام خانوادگی"
                       />
-                    </el-form-item>
+                    </ElFormItem>
                   </div>
                   <!-- <div class="item rtl">
-                    <el-form-item label="نام مستعار" prop="nick_name">
+                    <ElFormItem label="نام مستعار" prop="nick_name">
                       <el-input v-model="form.nick_name" placeholder="نام مستعار" />
-                    </el-form-item>
+                    </ElFormItem>
                   </div> -->
                   <!-- <div class="item rtl">
-                    <el-form-item label="بیوگرافی" prop="biography">
+                    <ElFormItem label="بیوگرافی" prop="biography">
                       <el-input v-model="form.biography" type="textarea" :rows="2" placeholder="بیوگرافی" />
-                    </el-form-item>
+                    </ElFormItem>
                   </div> -->
                 </div>
                 <div class="change-avatar text-left">
                   <client-only>
-                    <Crop v-model="form.profile_image" preview />
+                    <UploadImage v-model="form.profile_image" preview />
                   </client-only>
                 </div>
               </div>
@@ -60,20 +60,10 @@
                 </el-button>
               </div>
             </div>
-          </el-tab-pane>
-          <el-tab-pane v-if="user && !user.mobile_confirmed">
-            <span slot="label">
-              <div class="rtl">
-                <span class="label"> تایید موبایل </span>
-              </div>
-            </span>
-            <div class="tab-content">
-              <VerifyForm />
-            </div>
-          </el-tab-pane>
+          </ElTabPane>
           <!-- /Information -->
-        </el-tabs>
-      </el-form>
+        </ElTabs>
+      </ElForm>
     </div>
   </div>
 </template>
@@ -81,13 +71,11 @@
 <script>
 import omitBy from 'lodash/omitBy'
 import isEmpty from 'lodash/isEmpty'
-import Crop from '@/components/Shared/Crop.vue'
-import VerifyForm from '~/components/Auth/VerifyForm.vue'
+import UploadImage from '@/components/Shared/UploadImage.vue'
 
 export default {
   components: {
-    Crop,
-    VerifyForm,
+    UploadImage,
   },
   middleware: 'authenticated',
   data() {
@@ -182,8 +170,7 @@ export default {
       width: 70%;
     }
     .change-avatar {
-      width: 30%;
-      padding-right: 20px;
+      width: 100px;
       .btn-save {
         height: 100%;
         button {
