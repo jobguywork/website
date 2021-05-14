@@ -55,7 +55,6 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^7.9.0",
     "fibers": "^5.0.0",
-    "moment-locales-webpack-plugin": "^1.2.0",
     "prettier": "^2.3.0",
     "sass": "^1.32.13",
     "sass-loader": "^10.1.1"
