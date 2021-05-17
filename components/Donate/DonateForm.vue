@@ -16,11 +16,11 @@ import Donators from '@/components/Home/Donators/Donators';
             >
               <ElFormItem
                 prop="name"
-                label="نام و نام خانودادگی یا نام شرکت (نام مستعار)"
+                label="نام و نام خانوادگی یا نام شرکت (نام مستعار)"
               >
                 <ElInput
                   v-model="form.name"
-                  placeholder="نام و نام خانودادگی یا نام شرکت (نام مستعار)"
+                  placeholder="نام و نام خانوادگی یا نام شرکت (نام مستعار)"
                 />
               </ElFormItem>
               <ElFormItem prop="coin" label="انتخاب سکه">
