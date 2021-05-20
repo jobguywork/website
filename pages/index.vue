@@ -32,38 +32,16 @@
           />
           <!-- /discussed-companies -->
         </ElTabPane>
-        <ElTabPane aria-label="تب آخرین تجربه ها">
-          <span slot="label">
-            <i class="fa fa-comments" />
-            <span class="label">آخرین تجربه ها</span>
-          </span>
-          <!-- last-reviews -->
-          <LastReviews :reviews="home.last_reviews" title="آخرین تجربه ها" />
-          <!-- /last-reviews -->
-        </ElTabPane>
-        <ElTabPane aria-label="تب آخرین مصاحبه ها">
-          <span slot="label">
-            <i class="fa fa-coffee" />
-            <span class="label">آخرین مصاحبه ها</span>
-          </span>
-          <!-- discussed-companies -->
-          <LastReviews
-            :reviews="home.last_interviews"
-            title="آخرین مصاحبه ها"
-            type="interview"
-          />
-          <!-- /discussed-companies -->
-        </ElTabPane>
       </ElTabs>
     </div>
 
-    <!-- popular-categories -->
-    <PopularCategories :categories="home.industries" />
-    <!-- /popular-categories -->
+    <!-- Reviews -->
+    <Reviews :reviews="reviews" :loading="loading" @more="getReviews" />
+    <!-- /Reviews -->
 
-    <!-- reviews -->
-    <Reviews :reviews="home.quote" />
-    <!-- /reviews -->
+    <!-- Quotes -->
+    <Quotes :quotes="home.quote" />
+    <!-- /Quotes -->
 
     <!-- Donators -->
     <Donators :donators="home.donate" />
@@ -72,37 +50,46 @@
 </template>
 
 <script>
-// import { DOMAIN_TITLE } from '@/config/app.js'
 import IntroBanner from '@/components/Home/IntroBanner'
-import PopularCategories from '@/components/Home/PopularCategories/PopularCategories'
 import Companies from '@/components/Home/Companies/Companies'
-import LastReviews from '@/components/Home/LastReviews/LastReviews'
 import Donators from '@/components/Home/Donators/Donators'
 import Reviews from '@/components/Home/Reviews/Reviews'
+import Quotes from '@/components/Home/Quotes/Quotes'
 
 export default {
   components: {
     IntroBanner,
-    PopularCategories,
     Companies,
     Reviews,
-    LastReviews,
+    Quotes,
     Donators,
   },
-  async asyncData({ $axios, store }) {
-    try {
-      const { data } = await $axios.$get('/public/home/')
-
-      return {
-        home: data,
-        stats: {
-          total_interview: data.total_interview,
-          total_review: data.total_review,
-          total_user: data.total_user,
-          total_company: data.total_company,
+  data() {
+    return {
+      home: {
+        jobguy_text: [],
+        company: [],
+        discussed_company_list: [],
+        quote: [],
+        donate: {
+          THE_LAST: [],
+          THE_MOST: [],
         },
-      }
-    } catch (error) {}
+      },
+      reviews: [],
+      stats: {
+        total_interview: 0,
+        total_review: 0,
+        total_user: 0,
+        total_company: 0,
+      },
+      loading: false,
+      page: 0,
+      perPage: 10,
+    }
+  },
+  async fetch() {
+    await this.getReviews()
   },
   head() {
     return {
@@ -113,6 +100,39 @@ export default {
         class: 'home-page',
       },
     }
+  },
+  methods: {
+    async getReviews() {
+      try {
+        this.loading = true
+        this.page++
+
+        const payload = {
+          params: {
+            index: this.page === 1 ? 0 : (this.page - 1) * this.perPage,
+            size: this.perPage,
+          },
+          headers: {
+            Accept: 'application/json; version=1.0.1',
+          },
+        }
+
+        const { data } = await this.$axios.$get('/public/home/', payload)
+
+        this.home = data
+        this.stats = {
+          total_interview: data.total_interview,
+          total_review: data.total_review,
+          total_user: data.total_user,
+          total_company: data.total_company,
+        }
+
+        this.reviews.push(...data.reviews)
+      } catch (error) {
+      } finally {
+        this.loading = false
+      }
+    },
   },
 }
 </script>
