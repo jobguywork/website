@@ -11,8 +11,13 @@
         />
       </div>
       <div class="reviews__footer layout-h layout-center-center mt-40">
-        <ElButton type="primary" :loading="loading" @click="$emit('more')">
-          بارگزاری بیشتر
+        <ElButton
+          type="primary"
+          :loading="loading"
+          size="small"
+          @click="$emit('more')"
+        >
+          بارگذاری بیشتر
         </ElButton>
       </div>
     </div>
