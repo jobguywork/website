@@ -1,6 +1,6 @@
 <template>
-  <nuxt-link :to="link">
-    <div class="details">
+  <div class="review" @click="onClick">
+    <div class="details layout-h">
       <div class="logo hidden-xs-only">
         <el-image
           :src="mediaUrl(data.company.logo)"
@@ -10,12 +10,14 @@
         />
       </div>
       <div class="description rtl">
-        <div class="layout-h layout-justified">
-          <h3 class="title">
-            {{ title }}
-          </h3>
+        <div class="top layout-h layout-justified">
+          <h2 class="title">
+            <nuxt-link :to="link">
+              {{ title }}
+            </nuxt-link>
+          </h2>
           <div v-if="rate > 0" class="rate ltr hidden-xs-only">
-            <el-rate
+            <ElRate
               v-model="rate"
               :colors="['#F71735', '#F7BA2A', '#20BF55']"
               disabled
@@ -24,15 +26,22 @@
             />
           </div>
         </div>
-        <h5 class="company-name">
-          {{ data.company.name }}
-        </h5>
+        <div class="meta layout-h">
+          <div class="date ml-5">
+            {{ data.created | timeAgo }}
+          </div>
+          <ElDivider direction="vertical" />
+          <h5 class="company-name">
+            {{ data.company.name }}
+          </h5>
+        </div>
+
         <div class="footer">
           {{ data.description }}
         </div>
       </div>
     </div>
-  </nuxt-link>
+  </div>
 </template>
 
 <script>
@@ -47,7 +56,7 @@ export default {
     },
     type: {
       type: String,
-      default: 'review',
+      default: 'REVIEW',
     },
   },
   data() {
@@ -63,7 +72,7 @@ export default {
       return `${prefix} ${company.name}: ${title}`
     },
     link() {
-      return `/${this.type}/${this.data.id}/${this.titleToSlug(
+      return `/${this.type.toLowerCase()}/${this.data.id}/${this.titleToSlug(
         this.data.title
       )}`
     },
@@ -71,16 +80,22 @@ export default {
   mounted() {
     this.rate = this.data.over_all_rate || this.data.total_rate
   },
+  methods: {
+    onClick() {
+      this.$router.push(this.link)
+    },
+  },
 }
 </script>
 
 <style lang="scss" scoped>
-a {
+.review {
   display: block;
   padding: 30px 35px;
   background-color: #fff;
   transition: 0.3s;
   position: relative;
+  cursor: pointer;
   .details {
     display: flex;
     flex-wrap: wrap;
@@ -97,21 +112,45 @@ a {
       border: 1px solid rgba(0, 0, 0, 0.01);
       border-radius: 4px;
       margin-top: 5px;
-      img {
-        width: 100%;
-        transform: translate3d(0, 0, 0);
-        padding: 5px;
+      ::v-deep {
+        img {
+          min-width: 50px;
+          padding: 5px;
+        }
       }
     }
     .description {
       flex: 1;
       padding-top: 3px;
-      .title {
-        font-size: 18px;
-        line-height: 28px;
-        color: #333;
-        margin: 0;
-        margin-bottom: 5px;
+      width: calc(100% - 80px);
+      .top {
+        position: relative;
+        @media (max-width: 768px) {
+          flex-direction: column;
+        }
+        .title {
+          width: calc(100% - 200px);
+          font-size: 18px;
+          line-height: 28px;
+          color: #333;
+          margin: 0;
+          margin-bottom: 5px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          @media (max-width: 768px) {
+            width: 100%;
+            white-space: unset;
+            overflow: unset;
+            text-overflow: unset;
+          }
+        }
+      }
+
+      .meta {
+        .date {
+          font-size: 10px;
+        }
       }
       .footer {
         background-color: transparent;
@@ -131,10 +170,10 @@ a {
     font-weight: 500;
   }
 }
-a:nth-child(2n) {
+.review:nth-child(2n) {
   background-color: #f8f8f8;
 }
-a:before {
+.review:before {
   content: '';
   position: absolute;
   top: 0;
@@ -146,23 +185,20 @@ a:before {
   transition: 0.3s;
   opacity: 0;
 }
-a:hover {
+.review:hover {
   .el-button {
     background: $--color-primary;
     color: #fff;
   }
 }
-a:hover::before {
+.review:hover::before {
   background: $--color-primary;
   opacity: 1;
 }
 
 @media (max-width: 768px) {
-  a {
-    padding: 15px;
-    .title {
-      font-size: 14px !important;
-    }
+  .title {
+    font-size: 14px !important;
   }
 }
 </style>
