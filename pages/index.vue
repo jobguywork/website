@@ -66,7 +66,16 @@ export default {
   },
   data() {
     return {
-      home: {},
+      home: {
+        jobguy_text: [],
+        company: [],
+        discussed_company_list: [],
+        quote: [],
+        donate: {
+          THE_LAST: [],
+          THE_MOST: [],
+        },
+      },
       reviews: [],
       stats: {
         total_interview: 0,
