@@ -221,6 +221,9 @@ export default {
   p {
     line-height: 24px;
   }
+  .content {
+    line-height: 34px;
+  }
 }
 
 .footer-top-section {
