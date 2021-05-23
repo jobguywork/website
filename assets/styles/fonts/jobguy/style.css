@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icomoon';
   src:
-    url('./fonts/icomoon.ttf?fvlo4s') format('truetype'),
-    url('./fonts/icomoon.woff?fvlo4s') format('woff'),
-    url('./fonts/icomoon.svg?fvlo4s#icomoon') format('svg');
+    url('fonts/icomoon.ttf?498v6m') format('truetype'),
+    url('fonts/icomoon.woff?498v6m') format('woff'),
+    url('fonts/icomoon.svg?498v6m#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,11 +24,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.fa-github:before {
+  content: "\f09b";
+}
 .fa-copy:before {
   content: "\f0c5";
 }
 .fa-files-o:before {
   content: "\f0c5";
+}
+.fa-linkedin:before {
+  content: "\f0e1";
 }
 .fa-archive:before {
   content: "\f187";
@@ -101,9 +107,6 @@
 }
 .fa-thumbs-o-down:before {
   content: "\f088";
-}
-.fa-external-link:before {
-  content: "\f08e";
 }
 .fa-twitter:before {
   content: "\f099";
