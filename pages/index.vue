@@ -1,5 +1,5 @@
 <template>
-  <main class="sections">
+  <main v-loading.fullscreen.lock="loading" class="sections">
     <!-- intro-banner -->
     <IntroBanner :text-list="home.jobguy_text" :stats="stats" />
     <!-- /intro-banner -->
@@ -36,7 +36,7 @@
     </div>
 
     <!-- Reviews -->
-    <Reviews :reviews="reviews" :loading="loading" @more="getReviews" />
+    <Reviews :reviews="reviews" @more="getReviews" />
     <!-- /Reviews -->
 
     <!-- Quotes -->

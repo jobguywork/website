@@ -1,5 +1,5 @@
 <template>
-  <div v-loading.fullscreen.lock="loading" class="reviews">
+  <div class="reviews">
     <div class="container">
       <div class="reviews__title">آخرین‌ تجربه‌ها</div>
       <div class="reviews__list mt-40">
@@ -11,12 +11,7 @@
         />
       </div>
       <div class="reviews__footer layout-h layout-center-center mt-40">
-        <ElButton
-          type="primary"
-          :loading="loading"
-          size="small"
-          @click="$emit('more')"
-        >
+        <ElButton type="primary" size="small" @click="$emit('more')">
           بارگذاری بیشتر
         </ElButton>
       </div>
@@ -34,10 +29,6 @@ export default {
   props: {
     reviews: {
       type: Array,
-      required: true,
-    },
-    loading: {
-      type: Boolean,
       required: true,
     },
   },
