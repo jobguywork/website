@@ -1,5 +1,5 @@
 <template>
-  <footer id="footer" class="rtl">
+  <footer id="footer" class="rtl mt-40">
     <!-- Footer Top Section -->
     <div class="footer-top-section">
       <div class="container">
