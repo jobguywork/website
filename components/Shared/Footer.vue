@@ -1,5 +1,5 @@
 <template>
-  <footer id="footer" class="rtl">
+  <footer id="footer" class="rtl mt-40">
     <!-- Footer Top Section -->
     <div class="footer-top-section">
       <div class="container">
@@ -19,7 +19,7 @@
               <!-- Right Side -->
               <div class="footer-rows-right">
                 <!-- Social Icons -->
-                <div class="footer-row">
+                <div class="footer-row layout-h layout-center-center">
                   <div class="footer-row-inner">
                     <ul class="footer-social-links">
                       <li>
@@ -59,7 +59,6 @@
                         </a>
                       </li>
                     </ul>
-                    <div class="clearfix"></div>
                   </div>
                 </div>
               </div>
@@ -221,6 +220,9 @@ export default {
   p {
     line-height: 24px;
   }
+  .content {
+    line-height: 34px;
+  }
 }
 
 .footer-top-section {
@@ -247,12 +249,12 @@ export default {
 
 .footer-row-inner {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 5px;
+
   &.footer-logo {
     position: relative;
     top: auto;
-    transform: translateY(0);
+
     top: 50%;
     position: relative;
     height: 46px;
@@ -287,8 +289,6 @@ export default {
 
 .footer-social-links {
   list-style: none;
-  margin: 0 -10px;
-  margin-top: 5px;
   padding: 0;
   li {
     display: inline-block;
@@ -301,7 +301,6 @@ export default {
       display: inline-block;
       transition: 0.3s;
       opacity: 0.5;
-      transform: translate3d(0, -0.5px, 0);
       &:hover {
         opacity: 1;
       }
@@ -315,6 +314,9 @@ export default {
   padding: 60px 0;
   position: relative;
   z-index: 10;
+  .layout-wrap {
+    margin: 0 !important;
+  }
 }
 
 #footer {
@@ -435,19 +437,18 @@ export default {
       img {
         top: 0;
       }
-      top: 10;
+      top: -10px;
       position: relative;
       height: 50px;
     }
     position: relative;
     top: 0;
-    transform: translateY(0);
   }
   #footer .footer-row {
-    padding: 0;
-    float: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 20px 0 0 0;
-    display: block;
     width: 100%;
     border: none;
   }
@@ -455,6 +456,10 @@ export default {
     .footer-rows-left,
     .footer-rows-right {
       display: block;
+    }
+  }
+  .footer-middle-section {
+    .el-col {
     }
   }
 }
