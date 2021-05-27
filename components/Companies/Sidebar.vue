@@ -92,12 +92,6 @@
       </div>
       <!-- /salary -->
 
-      <div class="filter delete-company">
-        <el-checkbox v-model="filters.deleted">
-          فقط شرکت های حذف شده
-        </el-checkbox>
-      </div>
-
       <div class="footer">
         <el-button
           :loading="loading"

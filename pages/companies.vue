@@ -81,7 +81,6 @@ export default {
         industry: '',
         skill: null,
         benefits: [],
-        deleted: false,
       },
       display: 'grid',
     }
