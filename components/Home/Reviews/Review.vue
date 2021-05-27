@@ -68,7 +68,7 @@ export default {
     title() {
       const { company, title } = this.data
       const prefix =
-        this.type === 'review' ? 'تجربه کاری در شرکت' : 'تجربه مصاحبه در شرکت'
+        this.type === 'REVIEW' ? 'تجربه کاری در شرکت' : 'تجربه مصاحبه در شرکت'
       return `${prefix} ${company.name}: ${title}`
     },
     link() {
