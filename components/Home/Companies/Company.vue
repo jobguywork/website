@@ -14,12 +14,12 @@
             <el-tooltip
               class="item"
               effect="dark"
-              content="تجربه کاری"
+              content="مجموع تجربه‌های کاری و مصاحبه"
               placement="top-start"
             >
               <li>
                 <i class="fa fa-comments" />
-                <span class="text"> {{ countReviews }} تجربه کاری </span>
+                <span class="text"> {{ countReviews }} تجربه </span>
               </li>
             </el-tooltip>
             <el-tooltip
