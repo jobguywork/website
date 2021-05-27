@@ -1,5 +1,5 @@
 <template>
-  <div class="review" @click="onClick">
+  <div class="review">
     <div class="details layout-h">
       <div class="logo hidden-xs-only">
         <el-image
@@ -68,7 +68,7 @@ export default {
     title() {
       const { company, title } = this.data
       const prefix =
-        this.type === 'review' ? 'تجربه کاری در شرکت' : 'تجربه مصاحبه در شرکت'
+        this.type === 'REVIEW' ? 'تجربه کاری در شرکت' : 'تجربه مصاحبه در شرکت'
       return `${prefix} ${company.name}: ${title}`
     },
     link() {
@@ -80,11 +80,6 @@ export default {
   mounted() {
     this.rate = this.data.over_all_rate || this.data.total_rate
   },
-  methods: {
-    onClick() {
-      this.$router.push(this.link)
-    },
-  },
 }
 </script>
 
@@ -95,7 +90,6 @@ export default {
   background-color: #fff;
   transition: 0.3s;
   position: relative;
-  cursor: pointer;
   .details {
     display: flex;
     flex-wrap: wrap;
@@ -138,6 +132,12 @@ export default {
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
+          a {
+            color: #006df5;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
           @media (max-width: 768px) {
             width: 100%;
             white-space: unset;
