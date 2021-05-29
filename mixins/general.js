@@ -54,7 +54,7 @@ export const general = {
       }
     },
     cutString(str, limitString) {
-      const text = stripHTML(str)
+      const text = typeof str === 'string' ? stripHTML(str) : ''
       return str ? substr(text, 0, limitString) : ''
     },
     convertNum2persian(number) {
