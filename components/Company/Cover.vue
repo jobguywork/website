@@ -55,9 +55,9 @@
           <span>میانگین حقوق ماهانه</span>
           <div class="amount layout-h layout-center">
             <strong class="ml-5">
-              {{ company.salary_avg }}
+              {{ averageSalary }}
             </strong>
-            <span>میلیون</span>
+            <span v-if="company.salary_avg">میلیون</span>
           </div>
         </div>
         <div class="rate layout-h layout-center mt-20 ltr">
@@ -115,6 +115,13 @@ export default {
       return this.company.cover
         ? this.mediaUrl(this.company.cover)
         : '/images/cover-default.png'
+    },
+    averageSalary() {
+        if (this.company.salary_avg == 0) {
+            return 'نامعلوم'
+        }
+
+        return this.company.salary_avg
     },
   },
   mounted() {
