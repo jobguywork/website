@@ -303,13 +303,6 @@ export default {
               display: none;
             }
           }
-          // .is-success {
-          //   input::placeholder,
-          //   input {
-          //     color: #20bf55;
-          //     font-weight: 400;
-          //   }
-          // }
         }
       }
     }
@@ -350,7 +343,7 @@ export default {
           border-left: 1px solid #e0e0e0;
           text-align: center;
           strong {
-            font-weight: 400;
+            font-weight: 500;
             color: #fff;
             font-size: 28px;
             margin-bottom: 10px;
@@ -359,7 +352,7 @@ export default {
           }
           > span {
             display: block;
-            font-weight: 300;
+            font-weight: normal;
             color: #fff;
             font-size: 15px;
           }

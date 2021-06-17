@@ -213,7 +213,7 @@ export default {
     float: right;
     .el-tabs__item {
       padding: 0 16px;
-      font-weight: 400;
+      font-weight: 500;
     }
   }
   .wrap {
@@ -242,7 +242,7 @@ export default {
           }
           .label {
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 500;
             font-size: 12px;
           }
         }
@@ -253,7 +253,7 @@ export default {
         }
         .benefits {
           .title {
-            font-weight: 400;
+            font-weight: 500;
           }
           ul {
             padding-right: 10px;
@@ -303,7 +303,7 @@ export default {
       }
     }
     .ask-text {
-      font-weight: 400;
+      font-weight: 500;
     }
   }
 }

@@ -252,7 +252,7 @@ export default {
   }
   .extra-info {
     .title {
-      font-weight: 400;
+      font-weight: 500;
     }
     .date {
       .col {

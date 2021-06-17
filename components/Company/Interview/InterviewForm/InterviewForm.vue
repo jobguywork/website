@@ -318,8 +318,8 @@ export default {
         ],
         description: [
           {
-            max: 4000,
-            message: 'حداکثر طول متن بررسی 4000 کاراکتر می باشد.',
+            max: 5000,
+            message: 'حداکثر طول متن بررسی 5000 کاراکتر می باشد.',
             trigger: ['change', 'blur'],
           },
           {
@@ -481,7 +481,7 @@ export default {
       }
     }
     p {
-      font-weight: 400;
+      font-weight: 500;
     }
   }
 }
@@ -503,12 +503,12 @@ export default {
     padding-bottom: 0;
     .ask {
       font-size: 16px;
-      font-weight: 400;
+      font-weight: 500;
     }
     .rates {
       padding-top: 10px;
       .text {
-        font-weight: 400;
+        font-weight: 500;
       }
     }
     .date,
@@ -535,7 +535,7 @@ export default {
     }
     .el-switch__label * {
       font-size: 12px;
-      font-weight: 400;
+      font-weight: 500;
     }
   }
   .el-form-item {

@@ -49,7 +49,7 @@ export default {
   ::v-deep {
     .title {
       span {
-        font-weight: 600;
+        font-weight: 500;
       }
       .logo {
         img {

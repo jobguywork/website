@@ -89,7 +89,7 @@ export default {
           padding: 0 8px;
           color: #909090;
           background: rgba(0, 0, 0, 0.06);
-          font-weight: 600;
+          font-weight: 500;
           display: inline-block;
           margin: 0 auto;
           transition: 0.35s;
@@ -99,7 +99,7 @@ export default {
           h3 {
             font-size: 15px;
             line-height: 28px;
-            font-weight: 400;
+            font-weight: 500;
             color: #333;
             margin: 0;
             margin-bottom: 10px;

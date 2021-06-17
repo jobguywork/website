@@ -191,7 +191,7 @@ export default {
         h2,
         h1 {
           font-size: 22px;
-          font-weight: 400;
+          font-weight: 500;
           @media (max-width: 720px) {
             font-size: 16px !important;
             margin-top: 25px;
@@ -246,7 +246,7 @@ export default {
           color: #333;
           font-size: 24px;
           line-height: 36px;
-          font-weight: 300;
+          font-weight: 500;
         }
         strong.unknown {
           font-size: 17px;
@@ -263,7 +263,7 @@ export default {
           color: #000;
           font-size: 14px;
           line-height: 15px;
-          font-weight: 400;
+          font-weight: 500;
           padding: 5px 10px 1px 10px;
           position: relative;
           cursor: default;

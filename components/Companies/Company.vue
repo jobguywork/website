@@ -131,14 +131,14 @@ export default {
           color: gray;
           margin-top: 0;
           margin-bottom: 5px;
-          font-weight: 400;
+          font-weight: 500;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
         }
         p {
           font-size: 11px;
-          font-weight: 400;
+          font-weight: 500;
           overflow: hidden;
           height: 32px;
           line-height: 18px;
