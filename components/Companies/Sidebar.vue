@@ -185,7 +185,7 @@ export default {
     .filter {
       .title {
         font-size: 13px;
-        font-weight: 400;
+        font-weight: 500;
       }
     }
     .filter.salary {

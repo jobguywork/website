@@ -664,7 +664,7 @@ export default {
       }
     }
     p {
-      font-weight: 400;
+      font-weight: 500;
     }
   }
 }
@@ -686,12 +686,12 @@ export default {
     padding-bottom: 0;
     .ask {
       font-size: 16px;
-      font-weight: 400;
+      font-weight: 500;
     }
     .rates {
       padding-top: 10px;
       .text {
-        font-weight: 400;
+        font-weight: 500;
       }
     }
     .date,
@@ -719,7 +719,7 @@ export default {
     ::v-deep {
       .el-switch__label * {
         font-size: 12px;
-        font-weight: 400;
+        font-weight: 500;
       }
     }
   }

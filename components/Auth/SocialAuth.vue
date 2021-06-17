@@ -60,7 +60,7 @@ export default {
       margin: auto;
     }
     .text {
-      font-weight: 400;
+      font-weight: 500;
     }
   }
   button.google {

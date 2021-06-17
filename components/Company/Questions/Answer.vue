@@ -87,23 +87,21 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.company-page {
-  .answer {
-    background: rgba(0, 0, 0, 0.04);
-    border: 1px solid rgba(0, 0, 0, 0.07);
-    padding: 10px;
-    border-radius: 3px;
-    .body {
-      position: relative;
-      min-height: 65px;
-      .like-wrap {
-        margin-right: 5px;
-      }
+<style lang="scss" scoped>
+.answer {
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  padding: 10px;
+  border-radius: 3px;
+  list-style: none;
+  .body {
+    position: relative;
+    min-height: 65px;
+    font-size: 17px;
+    line-height: 32px;
+    .like-wrap {
+      margin-right: 5px;
     }
-  }
-  .answer:last-child {
-    margin-bottom: 10px;
   }
 }
 </style>

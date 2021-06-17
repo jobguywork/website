@@ -49,7 +49,7 @@ export default {
   ::v-deep {
     .title {
       span {
-        font-weight: 600;
+        font-weight: 500;
       }
       .logo {
         img {
@@ -61,8 +61,9 @@ export default {
     }
   }
   .content {
-    line-height: 30px;
+    line-height: 32px;
     text-align: justify;
+    font-size: 17px;
   }
 }
 </style>

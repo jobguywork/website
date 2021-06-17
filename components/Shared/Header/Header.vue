@@ -341,7 +341,7 @@ export default {
               cursor: pointer;
               margin: 0 10px;
               border: solid 2px $--color-primary;
-              font-weight: 300;
+              font-weight: 500;
               font-size: 12px;
               line-height: 26px;
               padding: 0 10px;

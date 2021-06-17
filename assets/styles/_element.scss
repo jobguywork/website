@@ -23,7 +23,7 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
 }
 
 .el-button {
-  font-weight: 300 !important;
+  font-weight: normal !important;
 }
 
 .el-form-item__error {
@@ -59,7 +59,7 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
   }
 
   .el-message-box__content {
-    font-weight: 300;
+    font-weight: normal;
   }
 
   .el-message-box__btns {
@@ -79,7 +79,7 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
 
 .rtl {
   .el-checkbox {
-    font-weight: 300;
+    font-weight: normal;
     margin-right: auto;
     margin-left: 15px;
 
@@ -115,7 +115,7 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
 }
 
 .el-dropdown-menu__item {
-  font-weight: 300;
+  font-weight: normal;
   text-align: right;
   direction: rtl;
 }
@@ -159,7 +159,7 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
 
     .el-dialog__title {
       font-size: 16px;
-      font-weight: 400;
+      font-weight: 500;
     }
 
     .el-dialog__headerbtn {
