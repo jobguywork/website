@@ -211,5 +211,9 @@ export default {
       }
     }
   }
+  .desc {
+    font-size: 17px;
+    line-height: 32px;
+  }
 }
 </style>

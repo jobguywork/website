@@ -168,6 +168,17 @@ li.question {
       font-size: 14px;
     }
   }
+  .see-answers {
+    ::v-deep {
+      .el-button {
+        cursor: default;
+      }
+    }
+  }
+  .desc {
+    font-size: 17px;
+    line-height: 32px;
+  }
 }
 li.question:nth-child(2n) {
   background: rgba(118, 188, 255, 0.04);

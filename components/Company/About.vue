@@ -38,5 +38,7 @@ export default {
 .content-tab {
   min-height: 400px;
   line-height: 28px;
+  font-size: 17px;
+  line-height: 32px;
 }
 </style>

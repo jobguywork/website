@@ -61,8 +61,9 @@ export default {
     }
   }
   .content {
-    line-height: 30px;
+    line-height: 32px;
     text-align: justify;
+    font-size: 17px;
   }
 }
 </style>

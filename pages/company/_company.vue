@@ -39,7 +39,7 @@
               <i class="fa fa-question" />
               <span class="label">
                 <span class="text">پرسش پاسخ</span>
-                <span class="count">({{ questions.total }})</span>
+                <!-- <span class="count">({{ questions.total }})</span> -->
               </span>
             </span>
             <Questions :questions="questions" />
