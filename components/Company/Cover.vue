@@ -54,7 +54,10 @@
         <div class="money-box layout-v text-right">
           <span>میانگین حقوق ماهانه</span>
           <div class="amount layout-h layout-center">
-            <strong class="ml-5">
+            <strong
+              class="ml-5"
+              :class="{ unknown: averageSalary === 'نامعلوم' }"
+            >
               {{ averageSalary }}
             </strong>
             <span v-if="company.salary_avg">میلیون</span>
@@ -117,11 +120,9 @@ export default {
         : '/images/cover-default.png'
     },
     averageSalary() {
-        if (this.company.salary_avg == 0) {
-            return 'نامعلوم'
-        }
+      const { salary_avg: salaryAvg } = this.company
 
-        return this.company.salary_avg
+      return salaryAvg === 0 ? 'نامعلوم' : salaryAvg
     },
   },
   mounted() {
@@ -246,6 +247,9 @@ export default {
           font-size: 24px;
           line-height: 36px;
           font-weight: 300;
+        }
+        strong.unknown {
+          font-size: 17px;
         }
       }
       .rate {
