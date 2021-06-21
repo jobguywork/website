@@ -90,7 +90,7 @@ export default {
       padding-right: 20px;
       .title {
         font-size: 18px;
-        font-weight: 400;
+        font-weight: 500;
         color: #333;
       }
       .rate {
@@ -99,7 +99,7 @@ export default {
           color: rgb(0, 0, 0);
           font-size: 14px;
           line-height: 15px;
-          font-weight: 400;
+          font-weight: 500;
           position: relative;
           cursor: default;
           border-radius: 4px;

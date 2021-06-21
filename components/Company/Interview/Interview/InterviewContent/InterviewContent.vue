@@ -190,7 +190,7 @@ export default {
   }
   .extra-info {
     .title {
-      font-weight: 400;
+      font-weight: 500;
     }
     .date {
       .col {
@@ -210,6 +210,10 @@ export default {
         }
       }
     }
+  }
+  .desc {
+    font-size: 17px;
+    line-height: 32px;
   }
 }
 </style>

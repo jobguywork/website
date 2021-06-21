@@ -22,9 +22,14 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .answers {
   margin-right: 20px !important;
   margin-top: 20px !important;
+  ::v-deep {
+    .answer:last-child {
+      margin-bottom: 10px;
+    }
+  }
 }
 </style>

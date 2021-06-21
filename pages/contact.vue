@@ -75,7 +75,7 @@ export default {
   }
   .create-company {
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
     a {
       color: rgb(81, 1, 255);
     }

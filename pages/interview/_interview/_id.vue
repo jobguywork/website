@@ -135,7 +135,7 @@ export default {
         .el-breadcrumb__item {
           font-size: 13px;
           span {
-            font-weight: 400;
+            font-weight: 500;
           }
         }
         .el-breadcrumb__item:nth-child(3) i {
@@ -159,9 +159,6 @@ export default {
       }
     }
   }
-}
-
-::v-deep {
 }
 </style>
 

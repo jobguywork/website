@@ -76,11 +76,11 @@ export default {
     }
     h2 {
       font-size: 18px;
-      font-weight: 400;
+      font-weight: 500;
     }
     h3 {
       font-size: 15px;
-      font-weight: 400;
+      font-weight: 500;
     }
   }
 }
@@ -280,7 +280,7 @@ export default {
 .medium-editor-toolbar li .medium-editor-action-pre {
   font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
   font-size: 12px;
-  font-weight: 100;
+  font-weight: normal;
   padding: 15px 0;
 }
 

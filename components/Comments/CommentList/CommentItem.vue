@@ -1,5 +1,5 @@
 <template>
-  <div class="comment layout-v py-3 px-5">
+  <div class="comment layout-v p-12">
     <div class="body">
       {{ comment.body }}
       <div class="date">
@@ -23,6 +23,8 @@ export default {
 <style lang="scss" scoped>
 .comment {
   border-top: 1px solid #dcdfe6;
+  font-size: 17px;
+  line-height: 32px;
   .body {
     position: relative;
     padding-bottom: 20px;
