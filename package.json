@@ -10,7 +10,7 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "deploy" : "node scripts/gh-pages-deploy.js"
+    "deploy" : "push-dir --dir=dist --branch=gh-pages --cleanup" 
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",

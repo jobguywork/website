@@ -1,9 +1,9 @@
-name: cd
+name: Deploy to Github pages
 
 on:
   push:
     branches: [ develop ]
-    
+
 jobs:
   cd:
     runs-on: ${{ matrix.os }}
