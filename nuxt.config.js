@@ -9,6 +9,14 @@ module.exports = {
   },
 
   /*
+  ** GitHub pages
+  */
+  target: 'static',
+  router: {
+    base: '/website/'
+  },
+
+  /*
    ** Headers of the page
    */
   head: {
