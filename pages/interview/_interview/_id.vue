@@ -38,7 +38,7 @@
           <Comments
             :comments="comments"
             :loading="loading"
-            @add-comment="handleAddComment"
+            @add-comment="onAddComment"
           />
         </ElCol>
       </ElRow>
@@ -104,7 +104,7 @@ export default {
     ...mapState('company/interview', ['interview']),
   },
   methods: {
-    async handleAddComment(form) {
+    async onAddComment(form) {
       try {
         this.loading = true
         const ID = this.$route.params.interview
@@ -113,6 +113,10 @@ export default {
           interview: { id: ID },
         })
         this.comments.unshift(data.data)
+        this.$notify({
+          message: 'نظر شما به زودی بررسی و تایید می شود.',
+          type: 'success',
+        })
       } catch (error) {
       } finally {
         this.loading = false

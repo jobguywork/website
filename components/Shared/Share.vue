@@ -7,26 +7,28 @@ import copy from 'clipboard-copy'
 
 export default {
   props: {
-    link: {
+    url: {
       type: String,
-      default: null,
+      required: true,
+    },
+    title: {
+      type: String,
       required: true,
     },
   },
   methods: {
     async share() {
-      if (navigator.clipboard) {
-        try {
-          await copy(this.link)
-          this.$message({
-            message: 'لینک کپی شد.',
-            type: 'success',
-          })
-        } catch (error) {}
+      const { title, url } = this
+      if (navigator.share) {
+        await navigator.share({
+          title,
+          url,
+        })
       } else {
+        copy(url)
         this.$message({
-          message: 'مرورگر شما پشتیبانی نمی کند.',
-          type: 'error',
+          message: 'لینک کپی شد.',
+          type: 'success',
         })
       }
     },

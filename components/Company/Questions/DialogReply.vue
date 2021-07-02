@@ -19,10 +19,10 @@
         صرف نظر
       </el-button>
       <el-button
-        :loading="loadingBtn"
+        :loading="loading"
         size="mini"
         type="primary"
-        @click="handleSubmit"
+        @click="onSubmit"
       >
         ارسال جواب
       </el-button>
@@ -36,9 +36,7 @@ import { mapState } from 'vuex'
 export default {
   data() {
     return {
-      form: {
-        answer: '',
-      },
+      form: {},
       rules: {
         answer: [
           {
@@ -54,7 +52,7 @@ export default {
           },
         ],
       },
-      loadingBtn: false,
+      loading: false,
     }
   },
   computed: {
@@ -74,41 +72,36 @@ export default {
     },
   },
   methods: {
-    handleSubmit() {
-      this.$refs.form.validate(async (valid) => {
-        if (valid) {
-          if (this.$isLogin) {
-            this.loadingBtn = true
-            const data = {
-              question: {
-                question_slug: this.dialog.questionReply.question_slug,
-              },
-              body: this.form.answer,
-            }
-            try {
-              await this.$axios.$post('/answer/create/', data)
-              this.loadingBtn = false
-              this.$notify({
-                message: 'جواب شما با موفقیت ثبت شد.',
-                type: 'success',
-              })
-              this.$store.dispatch('company/question/incrementAnswers')
-              this.$store.dispatch('company/question/toggleDialogReply')
-              await this.$store.dispatch('company/question/resetQuestions')
-              await this.$store.dispatch('company/question/getQuestions', {
-                company: this.company.company_slug,
-                first: true,
-              })
-            } catch (error) {
-              this.loadingBtn = false
-            }
-          } else {
-            this.$store.commit('theme/TOGGLE_DIALOG')
-          }
-        } else {
-          return false
+    async onSubmit() {
+      const valid = await this.$refs.form.validate()
+      if (!this.$isLogin) return this.$store.commit('theme/TOGGLE_DIALOG')
+      if (!valid) return false
+
+      try {
+        const payload = {
+          question: {
+            question_slug: this.dialog.questionReply.question_slug,
+          },
+          body: this.form.answer,
         }
-      })
+        this.loading = true
+        await this.$axios.$post('/answer/create/', payload)
+        this.$notify({
+          message: 'جواب شما به زودی بررسی و تایید می شود.',
+          type: 'success',
+        })
+        this.form = {}
+        this.$store.dispatch('company/question/incrementAnswers')
+        this.$store.dispatch('company/question/toggleDialogReply')
+        await this.$store.dispatch('company/question/resetQuestions')
+        await this.$store.dispatch('company/question/getQuestions', {
+          company: this.company.company_slug,
+          first: true,
+        })
+      } catch (error) {
+      } finally {
+        this.loading = false
+      }
     },
   },
 }
