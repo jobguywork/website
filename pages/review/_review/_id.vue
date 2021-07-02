@@ -38,7 +38,7 @@
           <Comments
             :comments="comments"
             :loading="loading"
-            @add-comment="handleAddComment"
+            @add-comment="onAddComment"
           />
         </ElCol>
       </ElRow>
@@ -107,7 +107,7 @@ export default {
   },
 
   methods: {
-    async handleAddComment(form) {
+    async onAddComment(form) {
       try {
         this.loading = true
         const ID = this.$route.params.review
@@ -116,6 +116,10 @@ export default {
           review: { id: ID },
         })
         this.comments.unshift(data.data)
+        this.$notify({
+          message: 'نظر شما به زودی بررسی و تایید می شود.',
+          type: 'success',
+        })
       } catch (error) {
       } finally {
         this.loading = false
