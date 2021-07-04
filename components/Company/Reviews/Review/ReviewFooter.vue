@@ -14,7 +14,7 @@
         </client-only>
       </div>
       <div class="share mr-20">
-        <Share :link="shareLink" />
+        <Share :url="shareLink" :title="review.title" />
       </div>
       <div v-if="review.my_review" class="edit mr-20">
         <Edit :id="review.id" />
