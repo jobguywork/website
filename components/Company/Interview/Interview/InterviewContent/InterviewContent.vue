@@ -78,11 +78,11 @@
         <div class="layout-h layout-justified cols">
           <div class="col layout-h layout-justified ml-10">
             <strong>حقوق پيشنهادی شما</strong>
-            <ElTag type="success">{{ interview.asked_salary }}</ElTag>
+            <ElTag type="success">{{ interview.asked_salary.toLocaleString('ir', {minimumFractionDigits: 2, maximumFractionDigits: 2}).split(".")[0] }}</ElTag>
           </div>
           <div class="col layout-h layout-justified">
             <strong>حقوق پیشنهادی آن‌ها</strong>
-            <ElTag type="success">{{ interview.offered_salary }}</ElTag>
+            <ElTag type="success">{{ interview.offered_salary.toLocaleString('ir', {minimumFractionDigits: 2, maximumFractionDigits: 2}).split(".")[0] }}</ElTag>
           </div>
         </div>
       </div>
