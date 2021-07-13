@@ -78,7 +78,7 @@
         <div class="layout-h layout-justified cols">
           <div class="col layout-h layout-justified ml-10">
             <strong>حقوق پيشنهادی شما</strong>
-            <ElTag type="success">{{ interview.asked_salary | numberFormat }}).split(".")[0] }}</ElTag>
+            <ElTag type="success">{{ interview.asked_salary | numberFormat }}</ElTag>
           </div>
           <div class="col layout-h layout-justified">
             <strong>حقوق پیشنهادی آن‌ها</strong>
