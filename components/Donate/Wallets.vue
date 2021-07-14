@@ -21,7 +21,14 @@
 
     <div
       id="wallets"
-      class="wallets layout-h layout-justified layout-wrap full-width mt-30 rtl mt-20"
+      class="
+        wallets
+        layout-h layout-justified layout-wrap
+        full-width
+        mt-30
+        rtl
+        mt-20
+      "
     >
       <div
         v-for="(wallet, walletIndex) of wallets"

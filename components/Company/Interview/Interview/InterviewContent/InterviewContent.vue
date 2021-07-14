@@ -78,11 +78,15 @@
         <div class="layout-h layout-justified cols">
           <div class="col layout-h layout-justified ml-10">
             <strong>حقوق پيشنهادی شما</strong>
-            <ElTag type="success">{{ interview.asked_salary | numberFormat }}</ElTag>
+            <ElTag type="success">{{
+              interview.asked_salary | numberFormat
+            }}</ElTag>
           </div>
           <div class="col layout-h layout-justified">
             <strong>حقوق پیشنهادی آن‌ها</strong>
-            <ElTag type="success">{{ interview.offered_salary | numberFormat }}</ElTag>
+            <ElTag type="success">{{
+              interview.offered_salary | numberFormat
+            }}</ElTag>
           </div>
         </div>
       </div>
@@ -126,6 +130,9 @@ export default {
   components: {
     InterviewMeta,
   },
+  filters: {
+    numberFormat,
+  },
   props: {
     interview: {
       type: Object,
@@ -147,9 +154,6 @@ export default {
   mounted() {
     this.rates.interviewer_rate = this.interview.interviewer_rate
     this.rates.total_rate = this.interview.total_rate
-  },
-  filters: {
-    numberFormat,
   },
 }
 </script>
