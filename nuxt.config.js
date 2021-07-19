@@ -50,8 +50,8 @@ module.exports = {
    ** Global CSS
    */
   css: [
-    'assets/styles/fonts/vazir/font.css',
-    'assets/styles/fonts/jobguy/style.css',
+    '/fonts/vazir/font.css',
+    'fonts/jobguy/style.css',
     'assets/styles/main.scss',
   ],
 
