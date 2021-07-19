@@ -11,7 +11,12 @@
               <div class="footer-rows-left">
                 <div class="footer-row">
                   <div class="footer-row-inner footer-logo">
-                    <img src="/images/logo.svg" alt="جاب گای" />
+                    <img
+                      src="/images/logo.svg"
+                      width="236"
+                      height="50"
+                      alt="جاب گای"
+                    />
                   </div>
                 </div>
               </div>
