@@ -78,11 +78,15 @@
         <div class="layout-h layout-justified cols">
           <div class="col layout-h layout-justified ml-10">
             <strong>حقوق پيشنهادی شما</strong>
-            <ElTag type="success">{{ interview.asked_salary }}</ElTag>
+            <ElTag type="success">{{
+              interview.asked_salary | numberFormat
+            }}</ElTag>
           </div>
           <div class="col layout-h layout-justified">
             <strong>حقوق پیشنهادی آن‌ها</strong>
-            <ElTag type="success">{{ interview.offered_salary }}</ElTag>
+            <ElTag type="success">{{
+              interview.offered_salary | numberFormat
+            }}</ElTag>
           </div>
         </div>
       </div>
@@ -120,10 +124,14 @@
 
 <script>
 import InterviewMeta from './InterviewMeta'
+import { numberFormat } from '~/utils/numberFormat'
 
 export default {
   components: {
     InterviewMeta,
+  },
+  filters: {
+    numberFormat,
   },
   props: {
     interview: {
