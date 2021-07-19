@@ -48,6 +48,7 @@
 
 <script>
 import { mapState } from 'vuex'
+import { BASE_URL } from '@/config/app'
 import Interview from '@/components/Company/Interview/Interview/Interview'
 import Cover from '@/components/Company/Cover.vue'
 import Comments from '@/components/Comments/Comments'
@@ -89,10 +90,12 @@ export default {
     }
   },
   head() {
+    const { company } = this
     return {
       ...this.$seo({
-        title: `تجربه مصاحبه در شرکت ${this.company.name}: ${this.interview.title}`,
+        title: `تجربه مصاحبه در شرکت ${company.name}: ${this.interview.title}`,
         description: this.cutString(this.interview.description, 180),
+        canonical: `${BASE_URL}/company/${company.company_slug}`,
       }),
       bodyAttrs: {
         class: 'page-review-details',
