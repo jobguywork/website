@@ -179,10 +179,11 @@ export default {
       backgroundImage: false,
     }
   },
-  mounted() {
-    setTimeout(() => {
-      this.backgroundImage = true
-    }, 5000)
+  beforeMount() {
+    window.addEventListener('scroll', this.onScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.onScroll)
   },
   methods: {
     submitForm() {
@@ -223,6 +224,12 @@ export default {
       this.company = item
       await this.$store.dispatch('company/company/resetAll')
       this.$router.push(`/company/${item.slug}`)
+    },
+
+    onScroll() {
+      // Your scroll handling here
+      console.log(window.scrollY)
+      this.backgroundImage = true
     },
   },
 }

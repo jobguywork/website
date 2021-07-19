@@ -22,6 +22,18 @@ module.exports = {
         content: config.META_DESCRIPTION,
       },
     ],
+    link: [
+      {
+        rel: 'preload',
+        as: 'font',
+        href: '/fonts/vazir/font.css',
+      },
+      {
+        rel: 'preload',
+        as: 'font',
+        href: '/fonts/jobguy/style.css',
+      },
+    ],
   },
   seo: {
     lang: 'fa',
@@ -49,11 +61,7 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [
-    'assets/styles/fonts/vazir/font.css',
-    'assets/styles/fonts/jobguy/style.css',
-    'assets/styles/main.scss',
-  ],
+  css: ['assets/styles/main.scss'],
 
   styleResources: {
     // your settings here
