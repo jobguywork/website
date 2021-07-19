@@ -1,6 +1,6 @@
 <template>
   <div class="medal">
-    <img :src="image" alt="medal" />
+    <img :src="image" alt="medal" width="32" height="32" />
   </div>
 </template>
 

@@ -3,7 +3,7 @@
     <div class="container">
       <el-row class="row-text">
         <el-col :span="24">
-          <span>تجربه کاری برای همه</span>
+          <h1>تجربه کاری برای همه</h1>
         </el-col>
       </el-row>
       <el-row class="row-search">
@@ -69,49 +69,25 @@
           <ul class="intro-stats layout-h layout-center-center">
             <li>
               <strong class="counter">
-                <countTo
-                  :start-val="0"
-                  :end-val="stats.total_interview"
-                  :duration="1000"
-                  :decimals="0"
-                  :autoplay="true"
-                />
+                {{ stats.total_interview }}
               </strong>
               <span>تجربه مصاحبه</span>
             </li>
             <li>
               <strong class="counter">
-                <countTo
-                  :start-val="0"
-                  :end-val="stats.total_review"
-                  :duration="1000"
-                  :decimals="0"
-                  :autoplay="true"
-                />
+                {{ stats.total_review }}
               </strong>
               <span>تجربه کاری</span>
             </li>
             <li>
               <strong class="counter">
-                <countTo
-                  :start-val="0"
-                  :end-val="stats.total_company"
-                  :duration="1000"
-                  :decimals="0"
-                  :autoplay="true"
-                />
+                {{ stats.total_company }}
               </strong>
               <span>شرکت</span>
             </li>
             <li>
               <strong class="counter">
-                <countTo
-                  :start-val="0"
-                  :end-val="stats.total_user"
-                  :duration="2000"
-                  :decimals="0"
-                  :autoplay="true"
-                />
+                {{ stats.total_user }}
               </strong>
               <span>همکار</span>
             </li>
@@ -126,14 +102,12 @@
 </template>
 
 <script>
-import countTo from 'vue-count-to'
 import debounce from 'lodash/debounce'
 import City from '@/components/Shared/City'
 import Marquee from '@/components/Shared/Marquee'
 
 export default {
   components: {
-    countTo,
     City,
     Marquee,
   },
@@ -179,10 +153,11 @@ export default {
       backgroundImage: false,
     }
   },
-  mounted() {
-    setTimeout(() => {
-      this.backgroundImage = true
-    }, 5000)
+  beforeMount() {
+    window.addEventListener('scroll', this.onScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.onScroll)
   },
   methods: {
     submitForm() {
@@ -224,6 +199,12 @@ export default {
       await this.$store.dispatch('company/company/resetAll')
       this.$router.push(`/company/${item.slug}`)
     },
+
+    onScroll() {
+      // Your scroll handling here
+      console.log(window.scrollY)
+      this.backgroundImage = true
+    },
   },
 }
 </script>
@@ -241,7 +222,7 @@ export default {
       margin-top: 122px;
     }
     .row-text {
-      span {
+      h1 {
         font-size: 30px;
       }
     }

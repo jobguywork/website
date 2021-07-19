@@ -1,6 +1,6 @@
 <template>
   <div v-if="company" class="wrap">
-    <Cover :company="company" />
+    <Cover :company="company" single />
     <div class="container">
       <!-- breadcrumb -->
       <div class="breadcrumb mt-30">
@@ -48,6 +48,7 @@
 
 <script>
 import { mapState } from 'vuex'
+import { BASE_URL } from '@/config/app'
 import Review from '@/components/Company/Reviews/Review/Review'
 import Cover from '@/components/Company/Cover.vue'
 import Comments from '@/components/Comments/Comments'
@@ -91,13 +92,15 @@ export default {
   },
 
   head() {
+    const { company } = this
     return {
       ...this.$seo({
-        title: `تجربه کاری در شرکت ${this.company.name}: ${this.review.title}`,
+        title: `تجربه کاری در شرکت ${company.name}: ${this.review.title}`,
         description: this.cutString(this.review.description, 180),
+        canonical: `${BASE_URL}/company/${company.company_slug}`,
       }),
       bodyAttrs: {
-        class: `page-review-details company-${this.company.company_slug}`,
+        class: `page-review-details company-${company.company_slug}`,
       },
     }
   },
