@@ -1,6 +1,6 @@
 <template>
   <div v-if="company" class="wrap">
-    <Cover :company="company" />
+    <Cover :company="company" single />
     <div class="container">
       <!-- breadcrumb -->
       <div class="breadcrumb mt-30">
