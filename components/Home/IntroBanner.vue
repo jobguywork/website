@@ -3,7 +3,7 @@
     <div class="container">
       <el-row class="row-text">
         <el-col :span="24">
-          <span>تجربه کاری برای همه</span>
+          <h1>تجربه کاری برای همه</h1>
         </el-col>
       </el-row>
       <el-row class="row-search">
@@ -241,7 +241,7 @@ export default {
       margin-top: 122px;
     }
     .row-text {
-      span {
+      h1 {
         font-size: 30px;
       }
     }
