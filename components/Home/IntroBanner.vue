@@ -69,49 +69,25 @@
           <ul class="intro-stats layout-h layout-center-center">
             <li>
               <strong class="counter">
-                <countTo
-                  :start-val="0"
-                  :end-val="stats.total_interview"
-                  :duration="1000"
-                  :decimals="0"
-                  :autoplay="true"
-                />
+                {{ stats.total_interview }}
               </strong>
               <span>تجربه مصاحبه</span>
             </li>
             <li>
               <strong class="counter">
-                <countTo
-                  :start-val="0"
-                  :end-val="stats.total_review"
-                  :duration="1000"
-                  :decimals="0"
-                  :autoplay="true"
-                />
+                {{ stats.total_review }}
               </strong>
               <span>تجربه کاری</span>
             </li>
             <li>
               <strong class="counter">
-                <countTo
-                  :start-val="0"
-                  :end-val="stats.total_company"
-                  :duration="1000"
-                  :decimals="0"
-                  :autoplay="true"
-                />
+                {{ stats.total_company }}
               </strong>
               <span>شرکت</span>
             </li>
             <li>
               <strong class="counter">
-                <countTo
-                  :start-val="0"
-                  :end-val="stats.total_user"
-                  :duration="2000"
-                  :decimals="0"
-                  :autoplay="true"
-                />
+                {{ stats.total_user }}
               </strong>
               <span>همکار</span>
             </li>
@@ -126,14 +102,12 @@
 </template>
 
 <script>
-import countTo from 'vue-count-to'
 import debounce from 'lodash/debounce'
 import City from '@/components/Shared/City'
 import Marquee from '@/components/Shared/Marquee'
 
 export default {
   components: {
-    countTo,
     City,
     Marquee,
   },
