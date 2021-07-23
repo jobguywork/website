@@ -1,7 +1,7 @@
 <template>
   <div class="reviews">
     <div class="container">
-      <div class="reviews__title">آخرین‌ تجربه‌ها</div>
+      <h2 class="reviews__title">آخرین‌ تجربه‌ها</h2>
       <div class="reviews__list mt-40">
         <Review
           v-for="item in reviews"

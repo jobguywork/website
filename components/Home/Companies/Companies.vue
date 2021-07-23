@@ -5,9 +5,9 @@
       <el-row class="header mb-35">
         <el-col :span="24">
           <div class="layout-h layout-around-justified">
-            <div class="title">
+            <h2 class="title">
               {{ title }}
-            </div>
+            </h2>
             <div
               class="more text-left layout-h layout-center layout-end-justified"
             >

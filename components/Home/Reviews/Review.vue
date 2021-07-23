@@ -11,11 +11,11 @@
       </div>
       <div class="description rtl">
         <div class="top layout-h layout-justified">
-          <h2 class="title">
+          <h3 class="title">
             <nuxt-link :to="link">
               {{ title }}
             </nuxt-link>
-          </h2>
+          </h3>
           <div v-if="rate > 0" class="rate ltr hidden-xs-only">
             <ElRate
               v-model="rate"
@@ -31,9 +31,9 @@
             {{ data.created | timeAgo }}
           </div>
           <ElDivider direction="vertical" />
-          <h5 class="company-name">
+          <h4 class="company-name">
             {{ data.company.name }}
-          </h5>
+          </h4>
         </div>
 
         <div class="footer">
