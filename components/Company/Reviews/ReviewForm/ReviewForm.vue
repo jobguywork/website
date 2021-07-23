@@ -315,7 +315,7 @@
                         :min="form.start_date"
                         format="jYYYY/jMM/jDD"
                         display-format="jYYYY/jMM/jDD"
-                        color="#0F9D58"
+                        color="#0A8549"
                         element="date-end-input"
                         view="year"
                       />

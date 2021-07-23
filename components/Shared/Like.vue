@@ -62,7 +62,7 @@ export default {
     transition: all 200ms linear;
   }
   i.active {
-    color: #0f9d58 !important;
+    color: #0A8549 !important;
   }
   .count {
     font-size: 13px;

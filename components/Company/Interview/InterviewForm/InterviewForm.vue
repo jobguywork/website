@@ -206,7 +206,7 @@
                     v-model="form.interview_date"
                     format="jYYYY/jMM/jDD"
                     display-format="jYYYY/jMM/jDD"
-                    color="#0F9D58"
+                    color="#0A8549"
                     element="interview_date"
                     view="year"
                     class="full-width"

@@ -133,7 +133,7 @@ export default {
           overflow: hidden;
           text-overflow: ellipsis;
           a {
-            color: #006df5;
+            color: #006aee;
             &:hover {
               text-decoration: underline;
             }
