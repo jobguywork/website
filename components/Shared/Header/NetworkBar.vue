@@ -8,10 +8,20 @@
     </nuxt-link>
     <el-divider direction="vertical"></el-divider>
     <div class="icons">
-      <a href="https://twitter.com/JobguyIR" target="_blank" rel="noreferrer">
+      <a
+        href="https://twitter.com/JobguyIR"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="حساب توئیتر جاب‌گای"
+      >
         <i class="fa fa-twitter"></i>
       </a>
-      <a href="https://t.me/jobguy" target="_blank" rel="noreferrer">
+      <a
+        href="https://t.me/jobguy"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="حساب تلگرام جاب‌گای"
+      >
         <i class="fa fa-telegram"></i>
       </a>
     </div>

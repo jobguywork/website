@@ -42,7 +42,12 @@
               </span>
               <span v-if="company.site" class="mt-15 layout-h">
                 <i class="fa fa-external-link ml-5" />
-                <a :href="company.site" target="_blank" rel="nofollow">
+                <a
+                  :href="company.site"
+                  target="_blank"
+                  rel="nofollow"
+                  :aria-label="'وبسایت ' + company.name"
+                >
                   {{ extractHostname(company.site) }}
                 </a>
               </span>
