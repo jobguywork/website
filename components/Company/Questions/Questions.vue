@@ -4,7 +4,7 @@
     <div class="title layout-h layout-justified">
       <div class="layout-h layout-center">
         <i class="fa fa-edit fa-lg ml-10" />
-        <div class="label mt-5">پرسش پاسخ</div>
+        <h2 class="label mt-5">پرسش پاسخ</h2>
       </div>
       <el-button size="mini" type="primary" @click="handleQuestion">
         سوال جدید
