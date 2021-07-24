@@ -172,6 +172,9 @@ export default {
   .el-tabs__nav {
     float: right;
   }
+  .el-tabs__item {
+    color: #6e7075 !important;
+  }
   .el-tabs__content {
     padding: 0;
   }

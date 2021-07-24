@@ -221,7 +221,7 @@ export default {
 <style lang="scss" scoped>
 #footer {
   background-color: #252c41;
-  color: #858b9f;
+  color: #8e94a9;
   p {
     line-height: 24px;
   }

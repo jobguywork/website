@@ -41,7 +41,7 @@ export default {
 
 <style lang="scss" scoped>
 .network {
-  background: $--color-success;
+  background: #07401e;
   color: #fff;
   line-height: 60px;
   height: 60px;

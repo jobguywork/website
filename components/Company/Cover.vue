@@ -238,7 +238,7 @@ export default {
         width: 175px;
         margin-top: 25px;
         span {
-          color: #888;
+          color: #757575;
           line-height: 20px;
           margin: 3px 0 8px;
         }

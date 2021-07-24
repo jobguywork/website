@@ -40,6 +40,6 @@ export default {
   position: relative;
 }
 .dislike {
-  color: red;
+  color: #ec0000;
 }
 </style>
