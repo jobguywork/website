@@ -4,9 +4,9 @@
     <div class="title layout-h layout-justified">
       <div class="layout-h layout-center-center">
         <i class="fa fa-edit fa-lg ml-10" />
-        <div class="label">
+        <h2 class="label">
           تجربه مصاحبه در <span>{{ company.name }}</span>
-        </div>
+        </h2>
       </div>
       <el-button size="mini" type="primary" @click="addInterview">
         ثبت تجربه مصاحبه
