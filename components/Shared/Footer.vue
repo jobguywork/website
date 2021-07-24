@@ -11,7 +11,12 @@
               <div class="footer-rows-left">
                 <div class="footer-row">
                   <div class="footer-row-inner footer-logo">
-                    <img src="/images/logo.svg" alt="جاب گای" />
+                    <img
+                      src="/images/logo.svg"
+                      width="236"
+                      height="50"
+                      alt="جاب گای"
+                    />
                   </div>
                 </div>
               </div>
@@ -216,7 +221,7 @@ export default {
 <style lang="scss" scoped>
 #footer {
   background-color: #252c41;
-  color: #858b9f;
+  color: #8e94a9;
   p {
     line-height: 24px;
   }

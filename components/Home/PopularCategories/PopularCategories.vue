@@ -107,7 +107,7 @@ export default {
             transition: 0.35s;
           }
           p {
-            color: #888;
+            color: #757575;
             margin: 0;
             padding: 0;
             line-height: 26px;

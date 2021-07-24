@@ -133,13 +133,13 @@ export default {
                 li {
                   display: inline-block;
                   margin-left: 10px;
-                  color: #777;
+                  color: #717171;
                   width: calc(16.5% - 20px);
                   > i {
                     position: relative;
                     top: 1px;
                     margin-left: 3px;
-                    color: #777;
+                    color: #717171;
                   }
                   .rate {
                     direction: ltr;

@@ -65,7 +65,7 @@ module.exports = {
     mobileApp: true,
     mobileAppIOS: true,
     appleStatusBarStyle: 'default',
-    theme_color: '#0F9D58',
+    theme_color: '#0A8549',
     nativeUI: true,
   },
 

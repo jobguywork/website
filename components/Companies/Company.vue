@@ -198,7 +198,7 @@ export default {
         margin: 0;
         li {
           display: inline-block;
-          color: #777;
+          color: #717171;
           i {
             margin-left: 3px;
           }
