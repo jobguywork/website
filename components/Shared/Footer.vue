@@ -207,6 +207,15 @@
       </div>
     </div>
     <!-- Footer Copyrights / End -->
+
+    <div class="internet">
+      <p>
+        ما با محدودکردن حق استفاده از اینترنت مخالفیم.
+        <a href="https://www.karzar.net/internet" target="_blank" rel="nofollow"
+          >اطلاعات بیشتر</a
+        >
+      </p>
+    </div>
   </footer>
 </template>
 
@@ -470,6 +479,37 @@ export default {
   .footer-middle-section {
     .el-col {
     }
+  }
+}
+
+.internet {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: auto;
+  width: 100%;
+  background: black;
+  z-index: 1000;
+  p {
+    text-align: center;
+    margin-top: 12px;
+    direction: rtl;
+    color: #f0f0f0;
+  }
+  a {
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+    background-color: #ffffff;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #666666;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 3px 10px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
   }
 }
 </style>
