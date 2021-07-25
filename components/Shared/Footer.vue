@@ -32,6 +32,7 @@
                           href="https://t.me/jobguy"
                           target="_blank"
                           rel="noreferrer"
+                          aria-label="حساب تلگرام جاب‌گای"
                         >
                           <i class="fa fa-telegram"></i>
                         </a>
@@ -41,6 +42,7 @@
                           href="https://twitter.com/JobguyIR"
                           target="_blank"
                           rel="noreferrer"
+                          aria-label="حساب توئیتر جاب‌گای"
                         >
                           <i class="fa fa-twitter"></i>
                         </a>
@@ -50,6 +52,7 @@
                           href="https://www.linkedin.com/company/jobguy/"
                           target="_blank"
                           rel="noreferrer"
+                          aria-label="حساب لینکدین جاب‌گای"
                         >
                           <i class="fa fa-linkedin"></i>
                         </a>
@@ -59,6 +62,7 @@
                           href="https://github.com/jobguywork/"
                           target="_blank"
                           rel="noreferrer"
+                          aria-label="حساب گیت‌هاب جاب‌گای"
                         >
                           <i class="fa fa-github"></i>
                         </a>

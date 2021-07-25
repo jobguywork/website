@@ -28,6 +28,7 @@
       :href="donator.link"
       target="_blank"
       rel="nofollow"
+      aria-label="جزئیات حمایت مالی"
     >
       <i class="fa fa-external-link" />
     </a>
