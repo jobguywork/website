@@ -201,8 +201,6 @@ export default {
     },
 
     onScroll() {
-      // Your scroll handling here
-      console.log(window.scrollY)
       this.backgroundImage = true
     },
   },
