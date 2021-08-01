@@ -265,6 +265,7 @@ import ResponseTimeSelect from '@/components/Shared/ResponseTimeSelect'
 import lscache from 'lscache'
 import pickBy from 'lodash/pickBy'
 import identity from 'lodash/identity'
+import VuePersianDatetimePicker from 'vue-persian-datetime-picker'
 
 export default {
   components: {
@@ -275,6 +276,7 @@ export default {
     ApplyMethodSelect,
     StatusSelect,
     ResponseTimeSelect,
+    DatePicker: VuePersianDatetimePicker,
   },
   props: {
     value: {

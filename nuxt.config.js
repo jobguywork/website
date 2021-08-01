@@ -86,27 +86,11 @@ module.exports = {
       ssr: true,
     },
     {
-      src: '@/plugins/gallery',
-      ssr: false,
-    },
-    {
       src: '@/plugins/helloJs',
       ssr: false,
     },
     {
-      src: '@/plugins/core-image-upload',
-      ssr: false,
-    },
-    {
       src: '@/plugins/infinite',
-      ssr: false,
-    },
-    {
-      src: '@/plugins/persianDate.js',
-      ssr: false,
-    },
-    {
-      src: '@/plugins/editor.js',
       ssr: false,
     },
     {
