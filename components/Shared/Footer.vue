@@ -104,7 +104,11 @@
               <h3>کارفرمایان</h3>
               <ul>
                 <li>
-                  <a href="https://hr.jobguy.work/" target="_blank">
+                  <a
+                    href="https://hr.jobguy.work/"
+                    target="_blank"
+                    rel="noopener"
+                  >
                     <span>پنل منابع انسانی</span>
                   </a>
                 </li>
@@ -211,7 +215,10 @@
     <div class="internet">
       <p>
         ما با محدودکردن حق استفاده از اینترنت مخالفیم.
-        <a href="https://www.karzar.net/internet" target="_blank" rel="nofollow"
+        <a
+          href="https://www.karzar.net/internet"
+          target="_blank"
+          rel="nofollow noopener"
           >اطلاعات بیشتر</a
         >
       </p>

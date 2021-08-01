@@ -27,7 +27,7 @@
       class="trx"
       :href="donator.link"
       target="_blank"
-      rel="nofollow"
+      rel="nofollow noopener"
       aria-label="جزئیات حمایت مالی"
     >
       <i class="fa fa-external-link" />

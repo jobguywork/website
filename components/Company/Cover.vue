@@ -45,7 +45,7 @@
                 <a
                   :href="company.site"
                   target="_blank"
-                  rel="nofollow"
+                  rel="nofollow noopener"
                   :aria-label="'وبسایت ' + company.name"
                 >
                   {{ extractHostname(company.site) }}
