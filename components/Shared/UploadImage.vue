@@ -38,8 +38,12 @@
 
 <script>
 import { UPLOAD_URL } from '@/config/app.js'
+import VueCoreImageUpload from 'vue-core-image-upload'
 
 export default {
+  components: {
+    VueCoreImageUpload,
+  },
   props: {
     value: {
       required: true,

@@ -9,7 +9,12 @@
 </template>
 
 <script>
+import MediumEditor from 'vue2-medium-editor'
+
 export default {
+  components: {
+    MediumEditor,
+  },
   props: {
     value: {
       type: String,

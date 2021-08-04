@@ -356,6 +356,7 @@ import Editor from '@/components/Shared/Editor'
 import lscache from 'lscache'
 import pickBy from 'lodash/pickBy'
 import identity from 'lodash/identity'
+import VuePersianDatetimePicker from 'vue-persian-datetime-picker'
 
 export default {
   components: {
@@ -363,6 +364,7 @@ export default {
     Pros,
     Cons,
     Editor,
+    DatePicker: VuePersianDatetimePicker,
   },
   props: {
     value: {
