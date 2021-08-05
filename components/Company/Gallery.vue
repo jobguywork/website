@@ -16,11 +16,9 @@
 </template>
 
 <script>
-import Gallery from 'vue-gallery'
-
 export default {
   components: {
-    Gallery,
+    Gallery: () => import('vue-gallery'),
   },
   props: {
     images: {
