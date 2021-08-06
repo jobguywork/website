@@ -56,7 +56,7 @@
             </p>
 
             <h3>مشارکت کنندگان در کد</h3>
-            <a class="image layout-h layout-center-center mt-20" href="#">
+            <a class="image layout-h layout-center-center mt-20" href="https://github.com/jobguywork/backend/graphs/contributors">
               <img
                 src="https://contrib.rocks/image?repo=jobguywork/backend"
                 alt="backend contributors"
@@ -64,7 +64,7 @@
                 title="مشارکت کنندگان بکند"
               />
             </a>
-            <a class="image layout-h layout-center-center mt-20" href="#">
+            <a class="image layout-h layout-center-center mt-20" href="https://github.com/jobguywork/website/graphs/contributors">
               <img
                 src="https://contrib.rocks/image?repo=jobguywork/website"
                 alt="front-end contributors"
