@@ -54,6 +54,24 @@
               میان بگذارید. در آخر تجربه‌کاری خودتون رو به اشتراک بگذارید و با
               معرفی ما به همکاران و دوستاتون از ما حمایت کنید.
             </p>
+
+            <p>مشارکت کنندگان در کد</p>
+            <a class="image layout-h layout-center-center mt-20" href="#">
+              <img
+                src="https://contrib.rocks/image?repo=jobguywork/backend"
+                alt="backend contributors"
+                height="470"
+                title="مشارکت کنندگان بکند"
+              />
+            </a>
+            <a class="image layout-h layout-center-center mt-20" href="#">
+              <img
+                src="https://contrib.rocks/image?repo=jobguywork/website"
+                alt="front-end contributors"
+                height="470"
+                title="مشارکت کنندگان فرانت اند"
+              />
+            </a>
           </div>
         </ElCard>
       </ElCol>
