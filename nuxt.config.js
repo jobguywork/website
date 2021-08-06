@@ -177,6 +177,35 @@ module.exports = {
     },
   },
   workbox: {
-    offline: false,
+    config: {
+      debug: false,
+    },
+    runtimeCaching: [
+      {
+        urlPattern: 'https://media.jobguy.work/.*',
+        handler: 'StaleWhileRevalidate',
+        strategyOptions: {
+          cacheName: 'images',
+          cacheExpiration: {
+            maxEntries: 300,
+            maxAgeSeconds: 60 * 60 * 24 * 7,
+          },
+          cacheableResponse: { statuses: [200] },
+        },
+      },
+      {
+        urlPattern: 'https://api.jobguy.work/public/.*',
+        handler: 'cacheFirst',
+        method: 'GET',
+        strategyOptions: {
+          cacheName: 'api',
+          cacheExpiration: {
+            maxEntries: 300,
+            maxAgeSeconds: 60 * 30,
+          },
+          cacheableResponse: { statuses: [200] },
+        },
+      },
+    ],
   },
 }
