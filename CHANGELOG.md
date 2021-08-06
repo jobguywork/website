@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/jobguywork/website/compare/v1.3.4...v1.4.0) (2021-08-06)
+
+
+### Features
+
+* enable workbox ([3568c13](https://github.com/jobguywork/website/commit/3568c13e882cd47822fe6a5cf2199e4869d45362))
+
 ### [1.3.4](https://github.com/jobguywork/website/compare/v1.3.3...v1.3.4) (2021-08-05)
 
 
