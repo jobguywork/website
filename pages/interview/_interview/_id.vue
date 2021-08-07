@@ -115,6 +115,7 @@ export default {
           ...form,
           interview: { id: ID },
         })
+        await caches.delete('api')
         this.comments.unshift(data.data)
         this.$notify({
           message: 'نظر شما به زودی بررسی و تایید می شود.',

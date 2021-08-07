@@ -143,6 +143,7 @@ export default {
           message: 'بروزرسانی با موفقیت انجام شد.',
           type: 'success',
         })
+        await caches.delete('api')
         this.$router.push('/profile/reviews')
       } catch (error) {
       } finally {

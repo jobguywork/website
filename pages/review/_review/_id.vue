@@ -119,6 +119,7 @@ export default {
           review: { id: ID },
         })
         this.comments.unshift(data.data)
+        await caches.delete('api')
         this.$notify({
           message: 'نظر شما به زودی بررسی و تایید می شود.',
           type: 'success',
