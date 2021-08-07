@@ -101,6 +101,7 @@ export default {
         )
 
         this.$cookies.remove('formInterview')
+        await caches.delete('api')
         this.$notify({
           message: 'مصاحبه شما با موفقیت ویرایش شد.',
           type: 'success',

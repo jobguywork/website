@@ -92,6 +92,7 @@ export default {
 
         this.$router.push('/profile/interviews')
         lscache.remove('formInterview')
+        await caches.delete('api')
       } catch (error) {
       } finally {
         this.loading = false

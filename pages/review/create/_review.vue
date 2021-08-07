@@ -117,6 +117,7 @@ export default {
         })
         this.$router.push('/profile/reviews')
         lscache.remove('formReview')
+        await caches.delete('api')
       } catch (error) {
       } finally {
         this.loading = false

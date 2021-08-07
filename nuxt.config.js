@@ -188,20 +188,20 @@ module.exports = {
           cacheName: 'images',
           cacheExpiration: {
             maxEntries: 300,
-            maxAgeSeconds: 60 * 60 * 24 * 7,
+            maxAgeSeconds: 60 * 60 * 24 * 30, // 30 days
           },
           cacheableResponse: { statuses: [200] },
         },
       },
       {
         urlPattern: 'https://api.jobguy.work/public/.*',
-        handler: 'cacheFirst',
+        handler: 'StaleWhileRevalidate',
         method: 'GET',
         strategyOptions: {
           cacheName: 'api',
           cacheExpiration: {
             maxEntries: 300,
-            maxAgeSeconds: 60 * 30,
+            maxAgeSeconds: 60 * 15, // 15 minutes
           },
           cacheableResponse: { statuses: [200] },
         },
