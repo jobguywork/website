@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/jobguywork/website/compare/v1.4.0...v1.4.1) (2021-08-07)
+
+
+### Bug Fixes
+
+* delete cache ([3bac314](https://github.com/jobguywork/website/commit/3bac314da86e5b3d232fe7a44f0d06fcbfd612cd))
+
 ## [1.4.0](https://github.com/jobguywork/website/compare/v1.3.4...v1.4.0) (2021-08-06)
 
 
