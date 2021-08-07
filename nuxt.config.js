@@ -201,7 +201,7 @@ module.exports = {
           cacheName: 'api',
           cacheExpiration: {
             maxEntries: 300,
-            maxAgeSeconds: 300, // 15 minutes
+            maxAgeSeconds: 300, // 5 minutes
           },
           cacheableResponse: { statuses: [200] },
         },
