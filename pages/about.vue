@@ -19,7 +19,7 @@
               هیچکس نتونه بهمون ظلم کنه.»
             </p>
 
-            <p>ما کی هستیم؟</p>
+            <h3>ما کی هستیم؟</h3>
 
             <p>
               ما چند تا دوست هستیم که با مشکل ناقص بودن اطلاعات درباره
@@ -29,7 +29,7 @@
               ایران را حس کردید به ما بپیوندید.
             </p>
 
-            <p>جاب گای؟</p>
+            <h3>جاب گای؟</h3>
 
             <p>
               اگر&nbsp;&nbsp; barney stinson در سریال How I met your
@@ -54,6 +54,24 @@
               میان بگذارید. در آخر تجربه‌کاری خودتون رو به اشتراک بگذارید و با
               معرفی ما به همکاران و دوستاتون از ما حمایت کنید.
             </p>
+
+            <h3>مشارکت کنندگان در کد</h3>
+            <a class="image layout-h layout-center-center mt-20" href="https://github.com/jobguywork/backend/graphs/contributors">
+              <img
+                src="https://contrib.rocks/image?repo=jobguywork/backend"
+                alt="backend contributors"
+                height="470"
+                title="مشارکت کنندگان بکند"
+              />
+            </a>
+            <a class="image layout-h layout-center-center mt-20" href="https://github.com/jobguywork/website/graphs/contributors">
+              <img
+                src="https://contrib.rocks/image?repo=jobguywork/website"
+                alt="front-end contributors"
+                height="470"
+                title="مشارکت کنندگان فرانت اند"
+              />
+            </a>
           </div>
         </ElCard>
       </ElCol>
