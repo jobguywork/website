@@ -33,10 +33,16 @@ export default {
     },
   },
   watch: {
-    path(newValue, oldValue) {
-      if (this.visibleMenu) {
-        this.visibleMenu = false
-      }
+    path() {
+      if (this.visibleMenu) this.visibleMenu = false
+    },
+  },
+  mounted() {
+    window.addEventListener('beforeunload', this.deleteCache)
+  },
+  methods: {
+    async deleteCache() {
+      await caches.delete('api')
     },
   },
 }
